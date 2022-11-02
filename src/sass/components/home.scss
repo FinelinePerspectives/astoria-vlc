@@ -1,0 +1,41 @@
+.home {
+    width: 3856px;
+    height: 2160px;
+    background: #808080;
+    color: #fff;
+    padding: 350px;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__keyword {
+        color: #C8B273;
+    }
+
+    h1 {
+        font-size: 150px;
+        text-shadow: 5px 5px 15px #00000050;
+    }
+
+    &[data-bg='1'] {
+        background: url('../../assets/bg-home-01.jpg');
+        @include bgCover();
+    }
+
+    &[data-bg='2'] {
+        background: url('../../assets/bg-home-02.jpg');
+        @include bgCover();
+    }
+
+    &[data-bg='3'] {
+        background: url('../../assets/bg-home-03.jpg');
+        @include bgCover();
+    }
+
+    &[data-bg='4'] {
+        background: url('../../assets/bg-home-04.jpg');
+        @include bgCover();
+    }
+}

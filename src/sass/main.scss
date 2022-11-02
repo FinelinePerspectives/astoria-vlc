@@ -1,1 +1,5 @@
-@import "./components/hero.scss";
+@import "./generic/variables.scss";
+@import "./generic/mixins.scss";
+@import "./generic/base.scss";
+
+@import "./components/home.scss";

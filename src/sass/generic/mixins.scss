@@ -1,0 +1,23 @@
+@mixin btnTransition {
+    transition: background 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
+@mixin breakpointDown($screen) {
+    @media (max-width: $screen) {
+        @content;
+    }
+ }
+
+@mixin breakpointUp($screen) {
+    @media (min-width: $screen) {
+        @content;
+    }
+ }
+
+ @mixin bgCover() {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 0.5s ease-in-out;
+ }
