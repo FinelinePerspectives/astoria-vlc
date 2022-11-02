@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
+import initUserSettings from './data/initUserSettings';
 
-import Home from './components/Home.component';
+import HomePage from './pages/Home.page';
 
 import './sass/main.scss';
 
 function App() {
   const [slide, setSlide] = useState(1);
+  const [userSettings, setUserSettings] = useState(initUserSettings);
 
   useEffect(() => {
     initSlideChange();
@@ -20,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Home slide={slide} />
+        <HomePage slide={slide} userSettings={userSettings} setUserSettings={setUserSettings} />
       </div>
     </div>
   );

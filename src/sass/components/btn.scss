@@ -1,0 +1,26 @@
+.btn {
+    outline: none;
+    border: none;
+    background: none;
+
+    padding: 30px;
+    border-radius: 50px;
+    font-size: inherit;
+
+    background: #C8B273;
+    color: white;
+
+    box-shadow: 0 10px 10px #00000025;
+    transition: background 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+
+
+    &:hover {
+        background: white;
+        color: #C8B273;
+    
+        transition: background 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out;
+
+    }
+}
