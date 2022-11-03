@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Button from '../components/Button.component';
 
-const HomePage = ({ slide, userSettings, setUserSettings }) => {
+const HomePage = ({ slide, userSettings, setUserSettings, setUserSettingsReceived }) => {
     const [initBtnClicked, setInitBtnClicked] = useState(false);
 
     const registrationInputs = [
@@ -17,32 +17,35 @@ const HomePage = ({ slide, userSettings, setUserSettings }) => {
             label: 'What Style of Living Are You Interested In?',
             id: 'livingStyle',
             options: [
-                { label: '1', value: '1' },
-                { label: '2', value: '2' },
+                { label: 'Apartment', value: 'apartment' },
             ]
         },
         {
             label: 'Number of Bedrooms',
             id: 'numOfBeds',
             options: [
-                { label: '3', value: '3' },
-                { label: '4', value: '4' },
+                { label: 'One Bedroom', value: 'onebedroom' },
+                { label: 'One Bedroom + Den', value: 'onebedroomden' },
+                { label: 'Two Bedroom', value: 'twobedroom' },
+                { label: 'Two Bedroom + Den', value: 'twobedroomden' },
             ]
         },
         {
             label: 'Square Foot Range',
             id: 'sqftRange',
             options: [
-                { label: '5', value: '5' },
-                { label: '6', value: '6' },
+                { label: '500 - 599', value: '500599' },
+                { label: '600 - 699', value: '600699' },
+                { label: '700 - 799', value: '700799' },
+                { label: '800 - 899', value: '800899' },
             ]
         },
         {
             label: 'Number of Bathroooms',
             id: 'numOfBaths',
             options: [
-                { label: '7', value: '7' },
-                { label: '8', value: '8' },
+                { label: 'One Bathroom', value: 'onebathroom' },
+                { label: 'Two Bathroom', value: 'twobathroom' },
             ]
         },
     ];
@@ -105,10 +108,7 @@ const HomePage = ({ slide, userSettings, setUserSettings }) => {
         }));
     }
 
-    const submitRegistration = (e) => {
-        e.preventDefault();
-        console.log(userSettings)
-    }
+    const submitRegistration = () => setUserSettingsReceived(true);
 
     const registrationScreen = () => {
         return (
@@ -137,7 +137,8 @@ const HomePage = ({ slide, userSettings, setUserSettings }) => {
 
                             return (
                                 <div className="home__registration--input" key={i}>
-                                    <select name={dropdown.label} onInput={(e) => onInputChange(e, dropdown.id)}>
+                                    <select name={dropdown.id} onInput={(e) => onInputChange(e, dropdown.id)}>
+                                        <option value={dropdown.label} disabled selected>{dropdown.label}</option>
                                         {options.map((opt, i) => <option key={i} value={opt.value}>{opt.label}</option>)}
                                     </select>
                                 </div>
@@ -167,9 +168,9 @@ const HomePage = ({ slide, userSettings, setUserSettings }) => {
     }
 
     return (
-        <div className="home" data-bg={slide}>
+        <section className="home" data-bg={slide}>
             {!initBtnClicked ? initScreen() : registrationScreen()}
-        </div>
+        </section>
     );
 }
 

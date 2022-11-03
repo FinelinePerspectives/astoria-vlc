@@ -16,3 +16,30 @@ p {
     margin: 0;
 }
 
+.container {
+    // width: 3856px;
+    // height: 2160px;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.content {
+    height: 1885px;
+    width: 3856px;
+}
+
+.nav {
+    height: 275px;
+    width: 100%;
+    background: #58585B;
+    color: #fff;
+}
+
+
+section {
+    box-sizing: border-box;
+    max-height: 1885px;
+    height: 100%;
+    width: 100%;
+}
