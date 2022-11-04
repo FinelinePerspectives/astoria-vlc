@@ -2,15 +2,105 @@
     background: #d9dada;
     width: 100%;
     height: 100%;
+    position: relative;
 
-    &__floorplate {
+    &__content {
+        display: none;
+        height: 100%;
+        width: 100%;
+
+        &[data-subsection='suites'] {
+            background: #fff;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__floor {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+
         overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
         
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: top center;
+            user-select: none;
+        }
+
+        &.active {
+            display: block;
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+
+    &__keyplan {
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        z-index: 3;
+        height: 755px;
+        width: 768px;
+
+       img {
+            user-select: none;
+       }
+    }
+
+    &__menu {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 625px;
+        z-index: 3;
+        box-shadow: 5px 10px 10px #00000025;
+
+        &--subsections {
+            background: #C7C7C7;
+            color: #58585B;
+            
+            display: flex;
+            flex-flow: row nowrap;
+
+            padding: 50px;
+
+            &-btn {
+                flex: 1 0 48%;
+
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+
+        &--floors {
+            background: #fff;
+            display: flex;
+            flex-flow: column nowrap;
+            row-gap: 25px;
+            padding: 50px;
+
+        }
+
+        &--floor {
+            width: 100%;
+
+            .btn {
+                text-align: start;
+                width: 100%;
+            }
         }
     }
 }

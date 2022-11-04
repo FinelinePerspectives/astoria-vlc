@@ -1,7 +1,9 @@
+import PropertyTourTemp from '../assets/images/propertyTour.png';
+
 const PropertyTour = () => {
     return (
         <section className="propertyTour">
-            <h1>Property Tour</h1>
+            <img src={PropertyTourTemp} alt="" />
         </section>
     )
 }

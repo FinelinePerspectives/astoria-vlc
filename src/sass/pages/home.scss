@@ -185,22 +185,22 @@
     }
 
     &[data-bg='1'] {
-        background: url('../../assets/bg-home-01.jpg');
+        background: url('../../assets/images/bg-home-01.jpg');
         @include bgCover();
     }
 
     &[data-bg='2'] {
-        background: url('../../assets/bg-home-02.jpg');
+        background: url('../../assets/images/bg-home-02.jpg');
         @include bgCover();
     }
 
     &[data-bg='3'] {
-        background: url('../../assets/bg-home-03.jpg');
+        background: url('../../assets/images/bg-home-03.jpg');
         @include bgCover();
     }
 
     &[data-bg='4'] {
-        background: url('../../assets/bg-home-04.jpg');
+        background: url('../../assets/images/bg-home-04.jpg');
         @include bgCover();
     }
 }

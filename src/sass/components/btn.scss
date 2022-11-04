@@ -8,19 +8,31 @@
     font-size: inherit;
 
     background: #C8B273;
-    color: white;
+    color: #fff;
 
-    box-shadow: 0 10px 10px #00000025;
-    transition: background 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out;
+    box-shadow: 0 10px 10px #00000010;
+
+    &-outline {
+        background: #fff;
+        color: #58585B;
+        border: 5px solid #C7C7C7;
+
+        &.active {
+            background: #C8B273;
+            color: #fff;
+            border: 5px solid #C8B273;
+        }
+    }
+
+    &-menu {
+        background: transparent;
+        color: #58585B;
+        box-shadow: none;
 
 
-    &:hover {
-        background: white;
-        color: #C8B273;
-    
-        transition: background 0.2s ease-in-out;
-        transition: color 0.2s ease-in-out;
-
+        &.active {
+            background: #C8B273;
+            color: #fff;
+        }
     }
 }

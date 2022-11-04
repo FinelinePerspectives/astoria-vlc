@@ -16,7 +16,7 @@ import './sass/main.scss';
 function App() {
   const [slide, setSlide] = useState(1);
   const [userSettings, setUserSettings] = useState(initUserSettings);
-  const [currentSection, setCurrentSection] = useState('home');
+  const [currentSection, setCurrentSection] = useState('suites');
 
   useEffect(() => {
     initSlideChange();
