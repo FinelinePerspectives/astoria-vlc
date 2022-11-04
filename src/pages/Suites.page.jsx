@@ -1,6 +1,10 @@
+import Floorplate from '../assets/svg/floorplate.svg';
+
 const SuitesPage = () => {
     return (<section className="suites">
-        <h1>Suites Page</h1>
+        <div className="suites__floorplate">
+            <img src={Floorplate} alt="" />
+        </div>
     </section>)
 }
 

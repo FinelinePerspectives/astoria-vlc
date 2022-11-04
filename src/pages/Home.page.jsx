@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Button from '../components/Button.component';
 
-const HomePage = ({ slide, userSettings, setUserSettings, setUserSettingsReceived }) => {
+const HomePage = ({ slide, userSettings, setUserSettings, setCurrentSection }) => {
     const [initBtnClicked, setInitBtnClicked] = useState(false);
 
     const registrationInputs = [
@@ -108,7 +108,7 @@ const HomePage = ({ slide, userSettings, setUserSettings, setUserSettingsReceive
         }));
     }
 
-    const submitRegistration = () => setUserSettingsReceived(true);
+    const submitRegistration = () => setCurrentSection('suites');
 
     const registrationScreen = () => {
         return (
