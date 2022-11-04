@@ -1,4 +1,4 @@
-module.exports = {
+export const initUserSettings = {
     firstName: '',
     lastName: '',
     postalCode: '',

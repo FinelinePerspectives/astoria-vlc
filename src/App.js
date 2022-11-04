@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import initUserSettings from './data/initUserSettings';
+import { initUserSettings } from './data/initUserSettings';
 
 // Components
 import Nav from './components/Nav.component';
@@ -23,9 +23,9 @@ function App() {
   }, [slide])
 
   const initSlideChange = () => {
-    window.setTimeout(() => {
-      slide !== 4 ? setSlide(slide + 1) : setSlide(1);
-    }, 2500)
+    // window.setTimeout(() => {
+    //   slide !== 4 ? setSlide(slide + 1) : setSlide(1);
+    // }, 2500)
   }
 
   return (
@@ -38,12 +38,13 @@ function App() {
               setUserSettings={setUserSettings}
               setCurrentSection={setCurrentSection}
             />}
-            {currentSection === 'suites' && <SuitesPage />}
+            {currentSection === 'suites' && <SuitesPage userSettings={userSettings} setUserSettings={setUserSettings} />}
             {currentSection === 'propertyTour' && <PropertyTourPage />}
             {currentSection === 'neighbourhoodTour' && <NeighbourhoodTourPage />}
             {currentSection === 'gallery' && <GalleryPage />}
           </div>
-            <Nav setCurrentSection={setCurrentSection} />
+
+          <Nav setUserSettings={setUserSettings} setCurrentSection={setCurrentSection} />
       </div>
     </div>
   );

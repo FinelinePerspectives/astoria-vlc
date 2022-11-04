@@ -10,7 +10,7 @@
         width: 100%;
 
         &[data-subsection='suites'] {
-            background: #fff;
+            background: #D9DADA;
         }
 
         &.active {
@@ -59,6 +59,17 @@
        }
     }
 
+    &__floorplan {
+        background: #fff;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 3;
+        width: 3067px;
+        height: 1786px;
+        box-shadow: 5px 10px 10px #00000025;
+    }
+
     &__menu {
         position: absolute;
         top: 50px;
@@ -70,13 +81,18 @@
         &--subsections {
             background: #C7C7C7;
             color: #58585B;
+            height: 166px;
             
             display: flex;
             flex-flow: row nowrap;
 
-            padding: 50px;
+            box-sizing: border-box;
+            padding: 0 50px;
 
             &-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 flex: 1 0 48%;
 
                 .btn {
@@ -91,7 +107,15 @@
             flex-flow: column nowrap;
             row-gap: 25px;
             padding: 50px;
+        }
 
+        &--suites {
+            background: #fff;
+            display: flex;
+            flex-flow: column nowrap;
+            row-gap: 25px;
+            padding: 50px;
+            height: 1620px;
         }
 
         &--floor {
@@ -100,6 +124,54 @@
             .btn {
                 text-align: start;
                 width: 100%;
+            }
+        }
+
+        &--dropdowns {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        &--dropdown {
+            height: 125px;
+            width: 100%;
+
+            select {
+                border: 2px solid #c7c7c7;
+            }
+        }
+
+        &--checkboxes {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            row-gap: 25px;
+            column-gap: 25px;
+        }
+
+        &--units {
+            background: #C8B273;
+            flex: 1;
+        }
+
+        &--controls {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        &--control {
+            flex: 1 0 38%;
+
+            &:nth-of-type(1) {
+                span {
+                    text-decoration: underline;
+                }
+            }
+
+            span {
+                font-size: 40px;
             }
         }
     }

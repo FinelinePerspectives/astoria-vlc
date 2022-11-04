@@ -1,0 +1,17 @@
+.filterInput {
+    &__dropdown {
+        height: 100px;
+        width: 100%;
+        font-size: 40px;
+        padding: 0 75px;
+        box-sizing: border-box;
+        border-radius: 100px;
+        border: 0;
+        color: #58585B;
+
+
+        &::placeholder {
+            color: #58585B;
+        }
+    }
+}

@@ -4,6 +4,12 @@ import Floorplate1 from '../assets/images/floorplate1.png';
 import Floorplate2 from '../assets/images/floorplate2.png';
 import Keyplan1 from '../assets/images/keyplan.png';
 
+import { filterDropdowns, filterCheckboxes } from '../data/filterData';
+
+import FilterDropdown from '../components/FilterDropdown.component';
+import FilterCheckbox from '../components/FilterCheckbox.component';
+
+import { initUserSettings } from '../data/initUserSettings';
 
 const suitesSubsections = [
     { id: 'floors', label: 'Floors' },
@@ -16,9 +22,20 @@ const floors = [
     { id: 'ground', label: 'Floor 1', floorplate: Floorplate1, keyplan: Keyplan1 },
 ]
 
-const SuitesPage = () => {
-    const [ currentSubsection, setCurrentSubsection ] = useState('floors');
+const SuitesPage = ({ userSettings, setUserSettings }) => {    
+    const [ currentSubsection, setCurrentSubsection ] = useState('suites');
     const [ currentFloor, setCurrentFloor ] = useState('floor1');
+    const [favouriteSuites, setFavouriteSuites] = useState([]);
+
+    const clearFilters = () => {
+        setUserSettings(initUserSettings);
+        console.log('filters cleared');
+    }
+
+    const clearFavouriteSuites = () => {
+        setFavouriteSuites([]);
+        console.log('favourites cleared');
+    }
 
     const renderFloor = (floor) => {
         const { id, floorplate, keyplan } = floor;
@@ -27,7 +44,7 @@ const SuitesPage = () => {
         id === currentFloor && classes.push('active');
 
         return (
-            <div className={classes.join(' ')} data-floor={id}>
+            <div className={classes.join(' ')} data-floor={id} key={id}>
                 <div className="suites__floorplate">
                     <img src={floorplate} alt="" />
                 </div>
@@ -46,7 +63,7 @@ const SuitesPage = () => {
         id === currentSubsection && btnClasses.push('active');
         
         return (
-            <div className="suites__menu--subsections-btn">
+            <div className="suites__menu--subsections-btn" key={id}>
                 <button className={btnClasses.join(' ')} onClick={() => setCurrentSubsection(id)}>{label}</button>
             </div>
         )
@@ -59,7 +76,7 @@ const SuitesPage = () => {
         id === currentFloor && btnClasses.push('active');
         
         return (
-            <div className='suites__menu--floor'>
+            <div className='suites__menu--floor' key={id}>
                 <button className={btnClasses.join(' ')} onClick={() => setCurrentFloor(id)}>{label}</button>
             </div>
         )
@@ -82,7 +99,9 @@ const SuitesPage = () => {
 
         return (
             <div className={classes.join(' ')} data-subsection="suites">
-                suites
+                <div className="suites__floorplan">
+                    suites
+                </div>
             </div>
         )
     }
@@ -99,8 +118,40 @@ const SuitesPage = () => {
 
             if (currentSubsection === 'suites') {
                 return (
-                    <div className="suites__menu--floors">
-                        suites submenu
+                    <div className="suites__menu--suites">
+                        <div className="suites__menu--dropdowns">
+                            {
+                                filterDropdowns.map(dropdown => {
+                                    return (<div className="suites__menu--dropdown" key={dropdown.id}>
+                                        <FilterDropdown dropdown={dropdown} userSettings={userSettings} setUserSettings={setUserSettings} />
+                                    </div>)
+                                })
+                            }
+                        </div>
+
+                        <div className="suites__menu--checkboxes">
+                            {
+                                filterCheckboxes.map(checkbox => {
+                                    return (<div className="suites__menu--checkbox">
+                                        <FilterCheckbox checkbox={checkbox} userSettings={userSettings} setUserSettings={setUserSettings} />
+                                    </div>)
+                                })
+                            }
+                        </div>
+
+                        <div className="suites__menu--units">
+                            units
+                        </div>
+
+                        <div className="suites__menu--controls">
+                            <div className="suites__menu--control" onClick={() => clearFilters()}>
+                                <span>Reset Filters</span>
+                            </div>
+
+                            <div className="suites__menu--control" onClick={() => clearFavouriteSuites()}>
+                                <span>Clear Favourites</span>
+                            </div>
+                        </div>
                     </div>
                 )
             }

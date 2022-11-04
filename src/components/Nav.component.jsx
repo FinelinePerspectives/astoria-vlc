@@ -1,11 +1,18 @@
 import AstoriaLogo from '../assets/svg/logo.svg';
 import ChooLogo from '../assets/svg/logo-choo-communities.svg';
 
-const Nav = ({ setCurrentSection }) => {
+import { initUserSettings } from '../data/initUserSettings';
+
+const Nav = ({ setUserSettings, setCurrentSection }) => {
+    const clearFilters = () => {
+        setUserSettings(initUserSettings);
+        setCurrentSection('home')
+    }
+    
     return (
         <nav className="nav">
             <div className="nav__content">
-                <div className="nav__logo--astoria" onClick={() => setCurrentSection('home')}>
+                <div className="nav__logo--astoria" onClick={() => clearFilters()}>
                     <img src={AstoriaLogo} alt="Astoria" />
                 </div>
 
