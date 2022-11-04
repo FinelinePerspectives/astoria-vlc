@@ -152,7 +152,13 @@
         }
 
         &--units {
-            background: #C8B273;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            row-gap: 10px;
+            column-gap: 10px;
             flex: 1;
         }
 
@@ -173,6 +179,119 @@
             span {
                 font-size: 40px;
             }
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        &--info {
+            position: absolute;
+            top: 70px;
+            left: 60px;
+            z-index: 3;
+            color: #58585B;
+
+            display: flex;
+            flex-flow: column nowrap;
+
+            text-transform: uppercase;
+
+            h2 {
+                font-size: 76px;
+                line-height: 92px;
+                color: #C8B273;
+            }
+        
+            p {
+                font-size: 40px;
+                line-height: 58px;
+            }
+
+            span {
+                font-size: 35px;
+                line-height: 42px;
+            }
+        }
+
+        &--floorplan {
+            height: 100%;
+            width: 1050px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        &--keyplans {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            height: 1500px;
+            width: 400px;
+
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+
+            z-index: 3;
+        }
+
+        &--keyplan {
+            flex: 1 0 30%;
+            width: 100%;
+            
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+
+    &__icon {
+        height: 110px;
+        width: 110px;
+        color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 30px;
+        }
+
+        &[data-bg="lightgrey"] {
+            background: #C7C7C7;
+        }
+
+        &[data-bg="gold"] {
+            background: #C8B273;
+        }
+
+        &[data-bg="darkgrey"] {
+            background: #58585B;
+        }
+
+        &[data-bg="green"] {
+            background: #BFD0CA;
+        }
+
+        &[data-bg="purple"] {
+            background: #BAA5CC;
         }
     }
 }

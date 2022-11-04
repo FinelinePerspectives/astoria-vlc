@@ -1,32 +1,25 @@
 import { useEffect, useState } from 'react';
 
-import Floorplate1 from '../assets/images/floorplate1.png';
-import Floorplate2 from '../assets/images/floorplate2.png';
-import Keyplan1 from '../assets/images/keyplan.png';
-
 import { filterDropdowns, filterCheckboxes } from '../data/filterData';
 
 import FilterDropdown from '../components/FilterDropdown.component';
 import FilterCheckbox from '../components/FilterCheckbox.component';
+import SuiteContainer from '../components/SuiteContainer.component';
+import SuitesIcon from '../components/SuitesIcon.component';
 
 import { initUserSettings } from '../data/initUserSettings';
+import { floors } from '../data/floors';
+import { suitesSubsections } from '../data/suitesSubsections';
+import { suitesData } from '../data/suitesData';
 
-const suitesSubsections = [
-    { id: 'floors', label: 'Floors' },
-    { id: 'suites', label: 'Suites' }
-];
-
-const floors = [
-    { id: 'floor2', label: 'Floor 2', floorplate: Floorplate1, keyplan: Keyplan1 },
-    { id: 'floor1', label: 'Ground Floor', floorplate: Floorplate2, keyplan: Keyplan1 },
-    { id: 'ground', label: 'Floor 1', floorplate: Floorplate1, keyplan: Keyplan1 },
-]
 
 const SuitesPage = ({ userSettings, setUserSettings }) => {    
     const [ currentSubsection, setCurrentSubsection ] = useState('suites');
     const [ currentFloor, setCurrentFloor ] = useState('floor1');
     const [favouriteSuites, setFavouriteSuites] = useState([]);
     const dropdowns = filterDropdowns.filter(drop => drop.section !== 'home');
+
+    const suitesTest = suitesData.filter(suite => suite.id === 'C1');
 
     const clearFilters = () => {
         setUserSettings(initUserSettings);
@@ -101,7 +94,7 @@ const SuitesPage = ({ userSettings, setUserSettings }) => {
         return (
             <div className={classes.join(' ')} data-subsection="suites">
                 <div className="suites__floorplan">
-                    suites
+                    {suitesTest.map((suite, i) => <SuiteContainer key={i} suite={suite} />)}
                 </div>
             </div>
         )
@@ -141,7 +134,7 @@ const SuitesPage = ({ userSettings, setUserSettings }) => {
                         </div>
 
                         <div className="suites__menu--units">
-                            units
+                            {suitesData.map(suite => <SuitesIcon suite={suite} />)}
                         </div>
 
                         <div className="suites__menu--controls">
