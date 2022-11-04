@@ -26,6 +26,7 @@ const SuitesPage = ({ userSettings, setUserSettings }) => {
     const [ currentSubsection, setCurrentSubsection ] = useState('suites');
     const [ currentFloor, setCurrentFloor ] = useState('floor1');
     const [favouriteSuites, setFavouriteSuites] = useState([]);
+    const dropdowns = filterDropdowns.filter(drop => drop.section !== 'home');
 
     const clearFilters = () => {
         setUserSettings(initUserSettings);
@@ -121,7 +122,7 @@ const SuitesPage = ({ userSettings, setUserSettings }) => {
                     <div className="suites__menu--suites">
                         <div className="suites__menu--dropdowns">
                             {
-                                filterDropdowns.map(dropdown => {
+                                dropdowns.map(dropdown => {
                                     return (<div className="suites__menu--dropdown" key={dropdown.id}>
                                         <FilterDropdown dropdown={dropdown} userSettings={userSettings} setUserSettings={setUserSettings} />
                                     </div>)
@@ -132,7 +133,7 @@ const SuitesPage = ({ userSettings, setUserSettings }) => {
                         <div className="suites__menu--checkboxes">
                             {
                                 filterCheckboxes.map(checkbox => {
-                                    return (<div className="suites__menu--checkbox">
+                                    return (<div className="suites__menu--checkbox" key={checkbox.id}>
                                         <FilterCheckbox checkbox={checkbox} userSettings={userSettings} setUserSettings={setUserSettings} />
                                     </div>)
                                 })

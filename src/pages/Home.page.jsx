@@ -9,6 +9,7 @@ import FilterCheckbox from '../components/FilterCheckbox.component';
 
 const HomePage = ({ slide, userSettings, setUserSettings, setCurrentSection }) => {
     const [initBtnClicked, setInitBtnClicked] = useState(false);
+    const dropdowns = filterDropdowns.filter(drop => drop.section !== 'suites');
 
     let keyword;
 
@@ -56,14 +57,14 @@ const HomePage = ({ slide, userSettings, setUserSettings, setCurrentSection }) =
                         <div className="home__registration--header">
                             <p>Please fill out a few personal details</p>
                         </div>
-                        {filterInputs.map((input, i) => <div className="home__registration--input" key={i}><FilterInput input={input} userSettings={userSettings} setUserSettings={setUserSettings} /></div>)}
+                        {filterInputs.map((input, i) => <div key={i} className="home__registration--input"><FilterInput input={input} userSettings={userSettings} setUserSettings={setUserSettings} /></div>)}
                     </div>
 
                     <div className="home__registration--col" data-col="dropdowns">
                         <div className="home__registration--header">
                             <p>What are you looking for?</p>
                         </div>
-                        {filterDropdowns.map((dropdown, i) => (<div className="home__registration--input" key={i}><FilterDropdown userSettings={userSettings} dropdown={dropdown} setUserSettings={setUserSettings} /></div>))}
+                        {dropdowns.map((dropdown, i) => (<div key={i} className="home__registration--input"><FilterDropdown userSettings={userSettings} dropdown={dropdown} setUserSettings={setUserSettings} /></div>))}
 
                         <div className="home__registration--input" data-input="checkboxes">
                             {filterCheckboxes.map((chk, i) => <FilterCheckbox key={i} checkbox={chk} setUserSettings={setUserSettings} userSettings={userSettings} />)}

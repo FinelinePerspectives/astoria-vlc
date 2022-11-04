@@ -1,5 +1,5 @@
 const FilterDropdown = ({ dropdown, userSettings, setUserSettings }) => {
-    const { id, placeholder, options } = dropdown;
+    const { id, placeholder, options, section } = dropdown;
 
     const selected = userSettings[id];
 
@@ -12,7 +12,7 @@ const FilterDropdown = ({ dropdown, userSettings, setUserSettings }) => {
 
     return (
         <select className="filterInput__dropdown" name={id} onChange={(e) => onInputChange(e, id)} value={selected}>
-            <option value="" selected>{placeholder}</option>
+            <option value="" defaultValue="" disabled>{placeholder}</option>
             {options.map((opt) => {
                 const { value, label } = opt;
                 return (<option key={value} value={value}>{label}</option>)

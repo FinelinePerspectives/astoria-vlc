@@ -23,9 +23,9 @@ function App() {
   }, [slide])
 
   const initSlideChange = () => {
-    // window.setTimeout(() => {
-    //   slide !== 4 ? setSlide(slide + 1) : setSlide(1);
-    // }, 2500)
+    window.setTimeout(() => {
+      slide !== 4 ? setSlide(slide + 1) : setSlide(1);
+    }, 2500)
   }
 
   return (
@@ -44,7 +44,7 @@ function App() {
             {currentSection === 'gallery' && <GalleryPage />}
           </div>
 
-          <Nav setUserSettings={setUserSettings} setCurrentSection={setCurrentSection} />
+          <Nav setUserSettings={setUserSettings} currentSection={currentSection} setCurrentSection={setCurrentSection} />
       </div>
     </div>
   );

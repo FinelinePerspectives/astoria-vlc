@@ -9,8 +9,19 @@ export const filterDropdowns = [
     {
         placeholder: 'What Style of Living Are You Interested In?',
         id: 'livingStyle',
+        section: 'home',
         options: [
-            { label: 'Apartment', value: 'apartment' },
+            { label: 'Luxury Apartments', value: 'luxuryapartments' },
+            { label: "Senior's Apartments", value: 'seniorsapartments' },
+        ]
+    },
+    {
+        placeholder: 'Building',
+        id: 'building',
+        section: 'suites',
+        options: [
+            { label: 'Building 1', value: 'building1' },
+            { label: 'Building 2', value: 'building2' },
         ]
     },
     {
