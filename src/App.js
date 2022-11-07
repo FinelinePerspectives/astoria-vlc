@@ -14,26 +14,18 @@ import GalleryPage from './pages/Gallery.page';
 import './sass/main.scss';
 
 function App() {
-  const [slide, setSlide] = useState(1);
   const [userSettings, setUserSettings] = useState(initUserSettings);
   const [currentSection, setCurrentSection] = useState('suites');
 
   useEffect(() => {
-    initSlideChange();
-  }, [slide])
-
-  const initSlideChange = () => {
-    // window.setTimeout(() => {
-    //   slide !== 4 ? setSlide(slide + 1) : setSlide(1);
-    // }, 2500)
-  }
+    console.log('App render');
+  }, [])
 
   return (
     <div className="App">
       <div className="container">
           <div className="content">
             {currentSection === 'home' && <HomePage 
-              slide={slide} 
               userSettings={userSettings}
               setUserSettings={setUserSettings}
               setCurrentSection={setCurrentSection}

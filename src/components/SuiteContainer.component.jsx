@@ -15,7 +15,7 @@ const SuiteContainer = ({ suite }) => {
             </div>
 
             <div className="suites__container--keyplans">
-                {keyplans.map((keyplan, i) => <div className="suites__container--keyplan" keyplan={i}>
+                {keyplans.map((keyplan, i) => <div className="suites__container--keyplan" key={i}>
                     <img src={keyplan} alt="keyplan" />
                 </div>)}
             </div>

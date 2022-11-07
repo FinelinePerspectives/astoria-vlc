@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Button from '../components/Button.component';
 import FilterInput from '../components/FilterInput.component';
@@ -7,9 +7,21 @@ import FilterDropdown from '../components/FilterDropdown.component';
 import { filterInputs, filterDropdowns, filterCheckboxes } from '../data/filterData';
 import FilterCheckbox from '../components/FilterCheckbox.component';
 
-const HomePage = ({ slide, userSettings, setUserSettings, setCurrentSection }) => {
+const HomePage = ({ userSettings, setUserSettings, setCurrentSection }) => {
     const [initBtnClicked, setInitBtnClicked] = useState(false);
     const dropdowns = filterDropdowns.filter(drop => drop.section !== 'suites');
+
+    const [slide, setSlide] = useState(1);
+
+    useEffect(() => {
+      initSlideChange();
+    }, [slide])
+  
+    const initSlideChange = () => {
+      window.setTimeout(() => {
+        slide !== 4 ? setSlide(slide + 1) : setSlide(1);
+      }, 5000)
+    }
 
     let keyword;
 

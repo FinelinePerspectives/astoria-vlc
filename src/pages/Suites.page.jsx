@@ -134,7 +134,7 @@ const SuitesPage = ({ userSettings, setUserSettings }) => {
                         </div>
 
                         <div className="suites__menu--units">
-                            {suitesData.map(suite => <SuitesIcon suite={suite} />)}
+                            {suitesData.map((suite, i) => <SuitesIcon suite={suite} key={i} />)}
                         </div>
 
                         <div className="suites__menu--controls">
