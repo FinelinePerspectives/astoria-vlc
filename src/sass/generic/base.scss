@@ -61,63 +61,6 @@ select, input {
     width: 3856px;
 }
 
-.nav {
-    height: 275px;
-    max-width: 3856px;
-    width: 100%;
-    background: #58585B;
-    color: #fff;
-    padding: 35px 350px;
-    box-sizing: border-box;
-
-    &__content {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-    }
-
-    &__links {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        width: 2518px;
-        height: 100%;
-
-        background: #d9dada;
-        padding: 25px;
-        box-sizing: border-box;
-    }
-
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        background: transparent;
-        color: #58585b;
-        flex: 1 0 23%;
-        height: 100%;
-        border-radius: 100px;
-
-        text-transform: uppercase;
-
-        font-family: nobel, sans-serif;
-        font-weight: 700;
-        font-style: normal;
-    
-
-        &.active {
-            background: #c8b273;
-            color: #fff;
-        }
-    }
-}
-
-
 section {
     box-sizing: border-box;
     max-height: 1885px;
