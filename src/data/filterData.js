@@ -45,7 +45,7 @@ export const filterDropdowns = [
         ]
     },
     {
-        placeholder: 'Number of Bathroooms',
+        placeholder: 'Number of Bathrooms',
         id: 'numOfBaths',
         options: [
             { label: 'One Bathroom', value: 'onebathroom' },

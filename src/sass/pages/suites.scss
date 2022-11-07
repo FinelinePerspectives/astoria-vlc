@@ -189,6 +189,7 @@
         position: relative;
         height: 100%;
         width: 100%;
+        font-family: 'Apercu Pro Bold', sans-serif;
 
         &--info {
             position: absolute;
@@ -217,6 +218,10 @@
                 font-size: 35px;
                 line-height: 42px;
             }
+        }
+
+        &--description {
+            font-family: 'Apercu Pro Regular', sans-serif;
         }
 
         &--floorplan {
