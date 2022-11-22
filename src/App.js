@@ -15,7 +15,7 @@ import './sass/main.scss';
 
 function App() {
   const [userSettings, setUserSettings] = useState(initUserSettings);
-  const [currentSection, setCurrentSection] = useState('suites');
+  const [currentSection, setCurrentSection] = useState('gallery');
 
   useEffect(() => {
     console.log('App render');
