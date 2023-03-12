@@ -1,4 +1,74 @@
 .neighbourhoodTour {
     height: 100%;
     width: 100%;
+    position: relative;
+    background: #fff;
+
+    .map {
+        height: 1885px;
+        width: 3856px;    
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include resetInfoWindow();
+        @include infoWindowArrow(red);
+        @include infoWindowRemoveClose()
+    }
+
+    &__menu {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        z-index: 3;
+        width: 623px;
+        height: 1792px;
+        background: white;
+        border-radius: 25px;
+        padding: 30px;
+
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 50px;
+    }
+
+    &__list {
+        &--items {
+            display: none;
+
+            li {
+                list-style-type: none;
+            }
+        }
+
+        &.active > &--items {
+            display: block;
+            animation: 0.25s listFadeIn ease-in-out;
+            opacity: 1;
+        }
+
+        &--header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            border-radius: 100px;
+            background: red;
+            color: white;
+            transition: background 0.25s ease-in-out;
+        }
+
+        &.active > &--header {
+            background: blue;
+            transition: background 0.25s ease-in-out;
+        }
+    }
+}
+
+@keyframes listFadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
 }

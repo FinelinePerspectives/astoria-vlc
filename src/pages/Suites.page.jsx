@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 
 import { filterDropdowns, filterCheckboxes } from '../data/filterData';
 
@@ -12,12 +12,15 @@ import { floors } from '../data/floors';
 import { suitesSubsections } from '../data/suitesSubsections';
 import { suitesData } from '../data/suitesData';
 
+import { Context } from '../context/context';
 
-const SuitesPage = ({ userSettings, setUserSettings }) => {    
+const SuitesPage = () => {    
     const [ currentSubsection, setCurrentSubsection ] = useState('suites');
     const [ currentFloor, setCurrentFloor ] = useState('floor1');
     const [favouriteSuites, setFavouriteSuites] = useState([]);
     const dropdowns = filterDropdowns.filter(drop => drop.section !== 'home');
+
+    const { userSettings, setUserSettings } = useContext(Context);
 
     const suitesTest = suitesData.filter(suite => suite.id === 'C1');
 

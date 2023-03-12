@@ -2,6 +2,8 @@ import AstoriaLogo from '../assets/svg/logo.svg';
 import ChooLogo from '../assets/svg/logo-choo-communities.svg';
 
 import { initUserSettings } from '../data/initUserSettings';
+import { useContext } from 'react';
+import { Context } from '../context/context';
 
 const navLinks = [
     { label: 'Suite Tour', id: 'suites' },
@@ -10,7 +12,9 @@ const navLinks = [
     { label: 'Gallery', id: 'gallery' },
 ]
 
-const Nav = ({ currentSection, setUserSettings, setCurrentSection }) => {
+const Nav = ({ currentSection, setCurrentSection }) => {
+    const { setUserSettings } = useContext(Context);
+
     const clearFilters = () => {
         setUserSettings(initUserSettings);
         setCurrentSection('home')

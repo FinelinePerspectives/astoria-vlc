@@ -1,5 +1,7 @@
-import { useEffect, useState } from 'react';
-import { initUserSettings } from './data/initUserSettings';
+import { useContext, useEffect, useState } from 'react';
+
+// Context
+import AppContext from './context/context';
 
 // Components
 import Nav from './components/Nav.component';
@@ -14,31 +16,30 @@ import GalleryPage from './pages/Gallery.page';
 import './sass/main.scss';
 
 function App() {
-  const [userSettings, setUserSettings] = useState(initUserSettings);
-  const [currentSection, setCurrentSection] = useState('gallery');
+  const [currentSection, setCurrentSection] = useState('home');
 
   useEffect(() => {
     console.log('App render');
-  }, [])
+  }, []);
 
   return (
-    <div className="App">
-      <div className="container">
-          <div className="content">
-            {currentSection === 'home' && <HomePage 
-              userSettings={userSettings}
-              setUserSettings={setUserSettings}
-              setCurrentSection={setCurrentSection}
-            />}
-            {currentSection === 'suites' && <SuitesPage userSettings={userSettings} setUserSettings={setUserSettings} />}
-            {currentSection === 'propertyTour' && <PropertyTourPage />}
-            {currentSection === 'neighbourhoodTour' && <NeighbourhoodTourPage />}
-            {currentSection === 'gallery' && <GalleryPage />}
-          </div>
+    <AppContext>
+      <div className="App">
+        <div className="container">
+            <div className="content">
+              {currentSection === 'home' && <HomePage 
+                setCurrentSection={setCurrentSection}
+              />}
+              {currentSection === 'suites' && <SuitesPage/>}
+              {currentSection === 'propertyTour' && <PropertyTourPage />}
+              {currentSection === 'neighbourhoodTour' && <NeighbourhoodTourPage />}
+              {currentSection === 'gallery' && <GalleryPage />}
+            </div>
 
-          <Nav setUserSettings={setUserSettings} currentSection={currentSection} setCurrentSection={setCurrentSection} />
+            <Nav currentSection={currentSection} setCurrentSection={setCurrentSection} />
+        </div>
       </div>
-    </div>
+    </AppContext>
   );
 }
 

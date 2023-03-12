@@ -13,5 +13,4 @@ export const initUserSettings = {
     hasWalkInCloset: false,
     isAccessible: false,
     hasVirtualTour: false,
-    building: ''
 };
