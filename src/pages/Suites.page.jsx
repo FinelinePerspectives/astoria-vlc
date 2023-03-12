@@ -10,28 +10,22 @@ import SuitesIcon from '../components/SuitesIcon.component';
 import { initUserSettings } from '../data/initUserSettings';
 import { floors } from '../data/floors';
 import { suitesSubsections } from '../data/suitesSubsections';
-import { suitesData } from '../data/suitesData';
 
 import { Context } from '../context/context';
 
 const SuitesPage = () => {    
     const [ currentSubsection, setCurrentSubsection ] = useState('suites');
-    const [ currentFloor, setCurrentFloor ] = useState('floor1');
-    const [favouriteSuites, setFavouriteSuites] = useState([]);
+    const [ currentFloor, setCurrentFloor ] = useState('groundFloor');
     const dropdowns = filterDropdowns.filter(drop => drop.section !== 'home');
 
-    const { userSettings, setUserSettings } = useContext(Context);
-
-    const suitesTest = suitesData.filter(suite => suite.id === 'C1');
+    const { userSettings, setUserSettings, suites, activeSuite, setActiveSuite, setSuites, favouriteSuites, setFavouriteSuites } = useContext(Context);
 
     const clearFilters = () => {
         setUserSettings(initUserSettings);
-        console.log('filters cleared');
     }
 
     const clearFavouriteSuites = () => {
         setFavouriteSuites([]);
-        console.log('favourites cleared');
     }
 
     const renderFloor = (floor) => {
@@ -97,7 +91,7 @@ const SuitesPage = () => {
         return (
             <div className={classes.join(' ')} data-subsection="suites">
                 <div className="suites__floorplan">
-                    {suitesTest.map((suite, i) => <SuiteContainer key={i} suite={suite} />)}
+                    {suites.length > 0 ? suites.map((suite, i) => <SuiteContainer key={i} suite={suite} isActive={suite.id === activeSuite} />) : <p>Sorry, there are no suites that match your search.</p>}
                 </div>
             </div>
         )
@@ -137,7 +131,7 @@ const SuitesPage = () => {
                         </div>
 
                         <div className="suites__menu--units">
-                            {suitesData.map((suite, i) => <SuitesIcon suite={suite} key={i} />)}
+                            {suites.map((suite, i) => <SuitesIcon suite={suite} key={i} />)}
                         </div>
 
                         <div className="suites__menu--controls">

@@ -21,9 +21,6 @@ const HomePage = ({ setCurrentSection }) => {
       initSlideChange();
     }, [slide]);
   
-    useEffect(() => {
-        console.log(userSettings)
-    }, [userSettings])
 
     const initSlideChange = () => {
       window.setTimeout(() => {

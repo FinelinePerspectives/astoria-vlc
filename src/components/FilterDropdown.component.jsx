@@ -1,5 +1,10 @@
-const FilterDropdown = ({ dropdown, userSettings, setUserSettings }) => {
-    const { id, placeholder, options, section } = dropdown;
+import { useContext } from 'react';
+import { Context } from '../context/context';
+
+const FilterDropdown = ({ dropdown }) => {
+    const { id, placeholder, options } = dropdown;
+
+    const { userSettings, setUserSettings } = useContext(Context);
 
     const selected = userSettings[id];
 
@@ -12,7 +17,7 @@ const FilterDropdown = ({ dropdown, userSettings, setUserSettings }) => {
 
     return (
         <select className="filterInput__dropdown" name={id} onChange={(e) => onInputChange(e, id)} value={selected}>
-            <option value="" defaultValue="" disabled>{placeholder}</option>
+            <option value="" defaultValue="" disabled={userSettings[id] === ""}>{userSettings[id] === "" ? placeholder : 'Show All'}</option>
             {options.map((opt) => {
                 const { value, label } = opt;
                 return (<option key={value} value={value}>{label}</option>)

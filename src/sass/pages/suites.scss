@@ -68,6 +68,11 @@
         width: 3067px;
         height: 1786px;
         box-shadow: 5px 10px 10px #00000025;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 
     &__menu {
@@ -183,13 +188,19 @@
     }
 
     &__container {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         position: relative;
         height: 100%;
         width: 100%;
         font-family: 'Apercu Pro Bold', sans-serif;
+        overflow: hidden;
+
+        &.active {
+            display: flex;
+            animation: 0.5s suitesContainerFadeIn ease-in-out;
+        }
 
         &--info {
             position: absolute;
@@ -270,6 +281,19 @@
         height: 110px;
         width: 110px;
         color: #fff;
+        position: relative;
+
+        &.active {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                height: 90px;
+                width: 90px;
+                border: 1px solid white;
+            }
+        }
 
         display: flex;
         justify-content: center;
@@ -298,5 +322,15 @@
         &[data-bg="purple"] {
             background: #BAA5CC;
         }
+    }
+}
+
+@keyframes suitesContainerFadeIn {
+    from {
+        display: none;
+        opacity: 0;
+    } to {
+        display: flex;
+        opacity: 1;
     }
 }

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Context
 import AppContext from './context/context';
@@ -16,10 +16,10 @@ import GalleryPage from './pages/Gallery.page';
 import './sass/main.scss';
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('home');
+  const [currentSection, setCurrentSection] = useState('suites');
 
   useEffect(() => {
-    console.log('App render');
+    console.log('App started');
   }, []);
 
   return (
@@ -27,9 +27,7 @@ function App() {
       <div className="App">
         <div className="container">
             <div className="content">
-              {currentSection === 'home' && <HomePage 
-                setCurrentSection={setCurrentSection}
-              />}
+              {currentSection === 'home' && <HomePage setCurrentSection={setCurrentSection} />}
               {currentSection === 'suites' && <SuitesPage/>}
               {currentSection === 'propertyTour' && <PropertyTourPage />}
               {currentSection === 'neighbourhoodTour' && <NeighbourhoodTourPage />}

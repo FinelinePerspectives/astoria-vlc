@@ -1,8 +1,11 @@
-const SuiteContainer = ({ suite }) => {
+const SuiteContainer = ({ suite, isActive }) => {
+    const classes = ['suites__container'];
+    isActive && classes.push('active');
+
     const { title, type, sqft, description, floorplan, keyplans } = suite;
 
     return (
-        <div className="suites__container">
+        <div className={classes.join(' ')}>
             <div className="suites__container--info">
                 <p className="suites__container--title">{title}</p>
                 <h2 className="suites__container--type">{type}</h2>

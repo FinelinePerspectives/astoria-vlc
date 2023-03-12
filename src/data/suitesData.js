@@ -10,7 +10,7 @@ export const suitesData = [
         id: "C1",
         title: 'C1 Unit Merry',
         type: '1 Bed + Den',
-        sqft: '640',
+        sqft: '740',
         description: '+ 107 Sq. Ft. w/Balcony 747 Sf. Ft.',
         floorplan: Floorplan,
         keyplans: [
@@ -18,14 +18,14 @@ export const suitesData = [
             Keyplan2,
             Keyplan3
         ],
-        numOfBeds: '1bed',
-        sqftRange: '',
-        numOfBaths: '',
-        hasDen: true,
+        numOfBeds: 'onebedroom',
+        sqftRange: '700799',
+        numOfBaths: 'onebathroom',
+        hasDen: false,
         hasBalcony: true,
         hasEnsuite: false,
         hasWalkInCloset: true,
-        isAccessible: true,
+        isAccessible: false,
         hasVirtualTour: false,
         dataBG: 'lightgrey'
     },
@@ -33,7 +33,7 @@ export const suitesData = [
         id: "C2",
         title: 'C1 Unit Merry',
         type: '1 Bed + Den',
-        sqft: '640',
+        sqft: '840',
         description: '+ 107 Sq. Ft. w/Balcony 747 Sf. Ft.',
         floorplan: Floorplan,
         keyplans: [
@@ -41,9 +41,9 @@ export const suitesData = [
             Keyplan2,
             Keyplan3
         ],
-        numOfBeds: '1bed',
-        sqftRange: '',
-        numOfBaths: '',
+        numOfBeds: 'twobedroom',
+        sqftRange: '800899',
+        numOfBaths: 'twobathroom',
         hasDen: true,
         hasBalcony: true,
         hasEnsuite: false,
@@ -65,14 +65,14 @@ export const suitesData = [
             Keyplan3
         ],
         numOfBeds: '1bed',
-        sqftRange: '',
-        numOfBaths: '',
+        sqftRange: '600699',
+        numOfBaths: 'twobedroomden',
         hasDen: true,
-        hasBalcony: true,
-        hasEnsuite: false,
-        hasWalkInCloset: true,
+        hasBalcony: false,
+        hasEnsuite: true,
+        hasWalkInCloset: false,
         isAccessible: true,
-        hasVirtualTour: false,
+        hasVirtualTour: true,
         dataBG: 'gold'
     }
 ]
