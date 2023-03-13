@@ -16,7 +16,7 @@ import GalleryPage from './pages/Gallery.page';
 import './sass/main.scss';
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('suites');
+  const [currentSection, setCurrentSection] = useState('neighbourhoodTour');
 
   useEffect(() => {
     console.log('App started');

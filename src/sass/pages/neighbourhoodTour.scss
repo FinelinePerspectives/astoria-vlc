@@ -29,7 +29,9 @@
 
         display: flex;
         flex-flow: column nowrap;
-        row-gap: 50px;
+        row-gap: 25px;
+    
+        overflow-y: scroll;
     }
 
     &__list {
@@ -86,6 +88,7 @@
             font-family: nobel, sans-serif;
             font-weight: 700;
             font-style: normal;
+            cursor: pointer;
         }
     }
 
@@ -96,19 +99,31 @@
         align-items: center;
         column-gap: 25px;
         list-style-type: none;
-        height: 80px;
+        min-height: 80px;
         width: 100%;
         padding: 10px 10px 10px 0;
+        cursor: pointer;
+
+        p {
+            user-select: none;
+        }
 
         &--number {
             height: 60px;
             width: 60px;
             border-radius: 50%;
-            color: white;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
+            p {
+                height: 60px;
+                width: 60px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+            }
+
         }
     }
 }

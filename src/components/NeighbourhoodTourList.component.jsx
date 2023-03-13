@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { Context } from "../context/context";
-
+import NeighbourhoodTourItem from "./NeighbourhoodTourItem.component";
 
 const NeighbourhoodTourList = ({ category, isActive }) => {
-    const { currentNeighbourhoodTourCategory, setCurrentNeghbourhoodTourCategory } = useContext(Context);
+    const { currentNeighbourhoodTourCategory, setCurrentNeghbourhoodTourCategory, activeNeighbourhoodTourItems } = useContext(Context);
 
     const classes = ['neighbourhoodTour__list'];
     isActive && classes.push('active');
@@ -17,18 +17,7 @@ const NeighbourhoodTourList = ({ category, isActive }) => {
         </div>
 
         <div className="neighbourhoodTour__list--items">
-            <div className="neighbourhoodTour__item">
-                <div className="neighbourhoodTour__item--number">1</div>
-                <div className="neighbourhoodTour__item--title">Item 1</div>
-            </div>
-            <div className="neighbourhoodTour__item">
-                <div className="neighbourhoodTour__item--number">1</div>
-                <div className="neighbourhoodTour__item--title">Item 1</div>
-            </div>
-            <div className="neighbourhoodTour__item">
-                <div className="neighbourhoodTour__item--number">1</div>
-                <div className="neighbourhoodTour__item--title">Item 1</div>
-            </div>
+            {isActive && activeNeighbourhoodTourItems.map((item, i) => <NeighbourhoodTourItem key={i} item={item} number={i+1} title={item.title} />)}
         </div>
     </div>);
 }

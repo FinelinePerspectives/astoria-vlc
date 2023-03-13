@@ -1,23 +1,35 @@
 import googleMapStyles from '../data/googlemapStyles';
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
-import { useMemo } from 'react';
+import MapItems from '../data/mapItems';
+import { useContext } from "react";
+import { Context } from '../context/context';
 
-const Map = ({ children }) => {
-    const coords = useMemo(() => ({ lat: 44.056061, lng: -79.4714572 }), []);
 
+const Map = () => {    
+    const {
+        mapCoords,
+        currentNeighbourhoodTourCategory,
+        setCurrentNeghbourhoodTourCategory,
+        activeNeighbourhoodTourItems,
+        setActiveNeighbourhoodTourItems
+     } = useContext(Context);
+
+    // const { isLoaded } = useJsApiLoader({
+    //     googleMapsApiKey: 'AIzaSyBeGZ5ha4FkhvwlVte4lW63pEvaVt2PViA'
+    // });
     const { isLoaded } = useJsApiLoader({
         googleMapsApiKey: ''
-    })
+    });
 
     if (isLoaded) {
         return (
             <GoogleMap 
                 zoom={15} 
-                center={coords}
+                center={mapCoords}
                 mapContainerClassName="map"
                 options={{ styles: googleMapStyles }}
             >
-                {children}
+                {activeNeighbourhoodTourItems.map((item, i) => <Marker key={i}>{i}</Marker>)}
             </GoogleMap>)
     }
 }
