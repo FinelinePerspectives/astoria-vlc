@@ -53,7 +53,7 @@ const AppContext = ({ children }) => {
     const [suites, setSuites] = useState(suitesData);
 
     // Neighbourhood Tour section
-    const [currentNeighbourhoodTourCategory, setCurrentNeghbourhoodTourCategory] = useState('restauraunts');
+    const [currentNeighbourhoodTourCategory, setCurrentNeghbourhoodTourCategory] = useState('Restaurants & Cafes');
 
     return (
         <Context.Provider 

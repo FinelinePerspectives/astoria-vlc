@@ -7,9 +7,11 @@ const NeighbourhoodTourMenu = () => {
 
     return (
         <div className="neighbourhoodTour__menu">
-            <NeighbourhoodTourList category="restauraunts" isActive={currentNeighbourhoodTourCategory === 'restauraunts'} />
-            <NeighbourhoodTourList category="shopping" isActive={currentNeighbourhoodTourCategory === 'shopping'} />
-            <NeighbourhoodTourList category="transit" isActive={currentNeighbourhoodTourCategory === 'transit'} />
+            <NeighbourhoodTourList category="Restaurants & Cafes" isActive={currentNeighbourhoodTourCategory === 'Restaurants & Cafes'} />
+            <NeighbourhoodTourList category="Lifestyle" isActive={currentNeighbourhoodTourCategory === 'Lifestyle'} />
+            <NeighbourhoodTourList category="Shopping" isActive={currentNeighbourhoodTourCategory === 'Shopping'} />
+            <NeighbourhoodTourList category="Parks & Trails" isActive={currentNeighbourhoodTourCategory === 'Parks & Trails'} />
+            <NeighbourhoodTourList category="Transit" isActive={currentNeighbourhoodTourCategory === 'Transit'} />
         </div>
     )
 }

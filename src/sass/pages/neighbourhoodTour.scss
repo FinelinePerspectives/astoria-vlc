@@ -33,12 +33,40 @@
     }
 
     &__list {
+        &[data-category="Restaurants & Cafes"] {
+            .neighbourhoodTour__list--header, .neighbourhoodTour__item--number {
+                background: #c8b273;
+            }
+        }
+        
+        &[data-category="Lifestyle"] {
+            .neighbourhoodTour__list--header, .neighbourhoodTour__item--number {
+                background: #BAA5CC;
+            }
+        }
+
+        &[data-category="Shopping"] {
+            .neighbourhoodTour__list--header, .neighbourhoodTour__item--number {
+                background: #C7C7C7;
+            }
+        }
+
+        &[data-category="Parks & Trails"] {
+            .neighbourhoodTour__list--header, .neighbourhoodTour__item--number {
+                background: #BFD0CA;
+            }
+        }
+
+        &[data-category="Transit"] {
+            .neighbourhoodTour__list--header, .neighbourhoodTour__item--number {
+                background: #58585B;
+            }
+        }
+
         &--items {
             display: none;
+            padding: 35px;
 
-            li {
-                list-style-type: none;
-            }
         }
 
         &.active > &--items {
@@ -53,14 +81,34 @@
             align-items: center;
             height: 100px;
             border-radius: 100px;
-            background: red;
             color: white;
             transition: background 0.25s ease-in-out;
+            font-family: nobel, sans-serif;
+            font-weight: 700;
+            font-style: normal;
         }
+    }
 
-        &.active > &--header {
-            background: blue;
-            transition: background 0.25s ease-in-out;
+    &__item {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 25px;
+        list-style-type: none;
+        height: 80px;
+        width: 100%;
+        padding: 10px 10px 10px 0;
+
+        &--number {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

@@ -11,16 +11,25 @@ const NeighbourhoodTourList = ({ category, isActive }) => {
     const setActive = () => currentNeighbourhoodTourCategory !== category && setCurrentNeghbourhoodTourCategory(category);
 
     return (
-    <div className={classes.join(' ')}>
-        <div className="neighbourhoodTour__list--header" onClick={setActive}>
+    <div className={classes.join(' ')} data-category={category}>
+        <div className="neighbourhoodTour__list--header" onClick={setActive} data-category={category}>
             <p>{category}</p>
         </div>
 
-        <ul className="neighbourhoodTour__list--items">
-            <li>Item 1</li>
-            <li>Item 1</li>
-            <li>Item 1</li>
-        </ul>
+        <div className="neighbourhoodTour__list--items">
+            <div className="neighbourhoodTour__item">
+                <div className="neighbourhoodTour__item--number">1</div>
+                <div className="neighbourhoodTour__item--title">Item 1</div>
+            </div>
+            <div className="neighbourhoodTour__item">
+                <div className="neighbourhoodTour__item--number">1</div>
+                <div className="neighbourhoodTour__item--title">Item 1</div>
+            </div>
+            <div className="neighbourhoodTour__item">
+                <div className="neighbourhoodTour__item--number">1</div>
+                <div className="neighbourhoodTour__item--title">Item 1</div>
+            </div>
+        </div>
     </div>);
 }
 
