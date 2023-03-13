@@ -53,3 +53,14 @@
         -webkit-filter: none;
     }
 }
+
+@mixin mapMarkerTheme($colour) {
+    .mapMarker__header, .mapMarker__times {
+        background: $colour !important;
+    }
+
+    .mapMarker__time--image {
+        border: 2px solid $colour;
+        svg path { fill: $colour }
+    }
+}

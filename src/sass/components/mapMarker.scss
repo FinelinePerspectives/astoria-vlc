@@ -1,0 +1,108 @@
+.mapMarker {
+    &__info {
+        display: flex;
+        flex-flow: column nowrap;
+        color: #fff;
+        font-weight: bold;
+        max-width: 200px;
+
+        &[data-category="Restaurants & Cafes"] {
+            $colour: #c8b273;
+            @include mapMarkerTheme($colour);
+            @include infoWindowArrow($colour);
+        }
+    
+        &[data-category="Lifestyle"] {
+            $colour: #BAA5CC;
+            @include mapMarkerTheme($colour);
+            @include infoWindowArrow($colour);
+
+        }
+
+        &[data-category="Shopping"] {
+            $colour: #C7C7C7;
+            @include mapMarkerTheme($colour);
+            @include infoWindowArrow($colour);
+
+        }
+
+        &[data-category="Parks & Trails"] {
+            $colour: #BFD0CA;
+            @include mapMarkerTheme($colour);
+            @include infoWindowArrow($colour);
+
+        }
+
+        &[data-category="Transit"] {
+            $colour: #58585B;
+            @include mapMarkerTheme($colour);
+            @include infoWindowArrow($colour);
+        }
+    }
+    
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 35px;
+        padding: 5px 15px;
+    }
+    
+    &__times {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        column-gap: 25px;
+        align-items: center;
+        margin-top: -10px;
+        padding: 0 10px 18px 10px;
+
+    }
+    
+    &__time {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
+        z-index: 6;
+        position: relative;
+
+    }
+    
+    &__time--image {
+        background: #fff;
+        border: 2px solid red;
+        height: 25px;
+        width: 25px;
+    
+        border-radius: 50%;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            height:60%;
+            width:60%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    
+    &__image {
+        height: 100px;
+        width: 100%;
+        z-index: 2;
+        position: relative;
+    
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    
+}

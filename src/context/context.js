@@ -84,7 +84,7 @@ const AppContext = ({ children }) => {
                 activeMapItem, setActiveMapItem
             }}>
                 {children}
-            </Context.Provider>)
+        </Context.Provider>)
 }
 
 export default AppContext;

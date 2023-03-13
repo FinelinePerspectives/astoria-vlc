@@ -3,16 +3,49 @@
     width: 100%;
     position: relative;
     background: #fff;
+    transition: 0.5s background;
+
+    &[data-category="Restaurants & Cafes"] {
+        $colour: #c8b273;
+        background: $colour;
+        @include infoWindowArrow($colour);
+    }
+    
+    &[data-category="Lifestyle"] {
+        $colour: #BAA5CC;
+        background: $colour;
+        @include infoWindowArrow($colour);
+    }
+
+    &[data-category="Shopping"] {
+        $colour: #C7C7C7;
+        background: $colour;
+        @include infoWindowArrow($colour);
+
+    }
+
+    &[data-category="Parks & Trails"] {
+        $colour: #BFD0CA;
+        background: $colour;
+        @include infoWindowArrow($colour);
+
+    }
+
+    &[data-category="Transit"] {
+        $colour: #58585B;
+        background: $colour;
+        @include infoWindowArrow($colour);
+
+    }
 
     .map {
         height: 1885px;
-        width: 3856px;    
+        width: 3135px;    
         position: absolute;
         top: 0;
         left: 0;
 
         @include resetInfoWindow();
-        @include infoWindowArrow(red);
         @include infoWindowRemoveClose()
     }
 
