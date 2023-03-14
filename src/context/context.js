@@ -71,17 +71,31 @@ const AppContext = ({ children }) => {
         filterMapItems();
     }, [currentNeighbourhoodTourCategory]);
 
+    // Toggle suite in favourites
+    const toggleFavourite = (suite) => {
+        const suiteIsFavourited = favouriteSuites.find(item => item.id === suite.id) ? true : false;
+
+        if (suiteIsFavourited) {
+            const arr = favouriteSuites.filter(item => item.id !== suite.id);
+            setFavouriteSuites(arr);
+        } else {
+            const arr = favouriteSuites;
+            arr.push(suite);
+            setFavouriteSuites(arr);
+        }
+    }
+
     return (
         <Context.Provider 
             value={{
                 userSettings, setUserSettings,
                 suites, setSuites,
                 activeSuite, setActiveSuite,
-                favouriteSuites, setFavouriteSuites,
+                favouriteSuites, setFavouriteSuites, toggleFavourite,
                 mapCoords, setMapCoords,
                 activeNeighbourhoodTourItems, setActiveNeighbourhoodTourItems,
                 currentNeighbourhoodTourCategory, setCurrentNeghbourhoodTourCategory,
-                activeMapItem, setActiveMapItem
+                activeMapItem, setActiveMapItem,
             }}>
                 {children}
         </Context.Provider>)

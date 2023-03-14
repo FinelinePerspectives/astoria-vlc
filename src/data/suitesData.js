@@ -27,7 +27,7 @@ export const suitesData = [
         hasWalkInCloset: true,
         isAccessible: false,
         hasVirtualTour: false,
-        dataBG: 'lightgrey'
+        dataBG: 'lightgrey',
     },
     {
         id: "C2",

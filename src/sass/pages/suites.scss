@@ -152,8 +152,8 @@
             justify-content: flex-start;
             align-items: center;
 
-            row-gap: 25px;
-            column-gap: 25px;
+            row-gap: 20px;
+            column-gap: 20px;
         }
 
         &--units {
@@ -183,6 +183,101 @@
 
             span {
                 font-size: 40px;
+            }
+        }
+    }
+
+    &__actions {
+        position: absolute;
+        top: 70px;
+        right: 60px;
+        height: 120px;
+        min-width: 640px;
+        column-gap: 25px;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        &--btn {
+            height: 105px;
+            width: 105px;
+            border-radius: 5px;
+
+            &[data-action="email"] {
+                background-image: url('../../assets/svg/icon-email.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-email-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-email-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="favourite"] {
+                background-image: url('../../assets/svg/icon-heart.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-heart-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-heart-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="print"] {
+                background-image: url('../../assets/svg/icon-print.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-print-active.svg');
+                    @include suitesActionBtn();
+                }
+
+                &.active {
+                    background-image: url('../../assets/svg/icon-print-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="compare"] {
+                background-image: url('../../assets/svg/icon-compare.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-compare-active.svg');
+                    @include suitesActionBtn();
+                }
+
+                &.active {
+                    background-image: url('../../assets/svg/icon-compare-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="virtualtour"] {
+                background-image: url('../../assets/svg/icon-virtualtour.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-virtualtour-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-virtualtour-active.svg');
+                    @include suitesActionBtn();
+                }
             }
         }
     }

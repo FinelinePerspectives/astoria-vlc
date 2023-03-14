@@ -64,3 +64,10 @@
         svg path { fill: $colour }
     }
 }
+
+@mixin suitesActionBtn() {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background 0.1s ease-in-out;
+}
