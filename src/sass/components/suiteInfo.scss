@@ -1,0 +1,40 @@
+.suiteInfo {
+    display: flex;
+    flex-flow: column nowrap;
+
+    text-transform: uppercase;
+    color: #58585B;
+
+    &[data-section="suites"] {
+        position: absolute;
+        top: 70px;
+        left: 60px;
+        z-index: 3;   
+        width: auto; 
+    }
+
+    &[data-section="compare"] {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 76px;
+        line-height: 92px;
+        color: #C8B273;
+    }
+
+    p {
+        font-size: 40px;
+        line-height: 58px;
+    }
+
+    span {
+        font-size: 35px;
+        line-height: 42px;
+    }
+
+    &__description {
+        font-family: 'Apercu Pro Regular', sans-serif;
+    }
+}
+
