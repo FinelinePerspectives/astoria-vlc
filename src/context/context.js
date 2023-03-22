@@ -38,18 +38,10 @@ const AppContext = ({ children }) => {
             });
 
             filterCheckboxes.forEach(chk => {
-                if (chk.id === 'vrTour') {
-                    if (chk.vrTour === '' || chk.vrTour === null) {
-                        returnSuite = false;
-                        return;
-                    }
-                } else {
-                    if (userSettings[chk.id] && suite[chk.id] !== userSettings[chk.id]) {
-                        returnSuite = false;
-                        return;
-                    }
+                if (userSettings[chk.id] && suite[chk.id] !== userSettings[chk.id]) {
+                    returnSuite = false;
+                    return;
                 }
-                
             });
             
             returnSuite && filteredSuites.push(suite);

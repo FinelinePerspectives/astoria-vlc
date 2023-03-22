@@ -26,6 +26,7 @@ export const suitesData = [
         hasEnsuite: false,
         hasWalkInCloset: true,
         isAccessible: false,
+        hasVrTour: false,
         vrTour: '',
         dataBG: 'lightgrey',
         pdf: 'https://finelineperspectives.dev/astoria/pdf/test.pdf'
@@ -51,6 +52,7 @@ export const suitesData = [
         hasWalkInCloset: true,
         isAccessible: true,
         dataBG: 'purple',
+        hasVrTour: false,
         pdf: 'https://finelineperspectives.dev/astoria/pdf/test.pdf',
         vrTour: null
     },
@@ -74,6 +76,7 @@ export const suitesData = [
         hasEnsuite: true,
         hasWalkInCloset: false,
         isAccessible: true,
+        hasVrTour: true,
         vrTour: 'https://finelinevirtualtours.com/1804/210/',
         dataBG: 'gold',
     }
