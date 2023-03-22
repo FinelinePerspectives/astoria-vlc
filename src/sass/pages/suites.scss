@@ -187,6 +187,33 @@
         }
     }
 
+    &__popup {
+        padding: 50px;
+        position: relative;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        height: 100%;
+        width: 100%;
+
+        &[data-popup="vr"] {
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            .suites__actions--btn {
+                z-index: 2;
+            }
+        }
+    }
+
     &__actions {
         position: absolute;
         top: 70px;
@@ -204,6 +231,21 @@
             height: 105px;
             width: 105px;
             border-radius: 5px;
+
+            &[data-action="close"] {
+                background-image: url('../../assets/svg/icon-close.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-close-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-close-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
 
             &[data-action="email"] {
                 background-image: url('../../assets/svg/icon-email.svg');

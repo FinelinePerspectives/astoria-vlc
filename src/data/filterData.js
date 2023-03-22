@@ -51,5 +51,5 @@ export const filterCheckboxes = [
     { label: 'Ensuite', id: 'hasEnsuite' },
     { label: 'Walk-In Closet', id: 'hasWalkInCloset' },
     { label: 'Accessibility', id: 'isAccessible' },
-    { label: 'VR Tour', id: 'hasVirtualTour' }
+    { label: 'VR Tour', id: 'vrTour' }
 ];
