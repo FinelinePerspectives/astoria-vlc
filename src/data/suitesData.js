@@ -33,7 +33,7 @@ export const suitesData = [
     },
     {
         id: "C2",
-        title: 'C1 Unit Merry',
+        title: 'C2 Unit Merry',
         type: '1 Bed + Den',
         sqft: '840',
         description: '+ 107 Sq. Ft. w/Balcony 747 Sf. Ft.',
@@ -58,7 +58,7 @@ export const suitesData = [
     },
     {
         id: "C3",
-        title: 'C1 Unit Merry',
+        title: 'C3 Unit Merry',
         type: '1 Bed + Den',
         sqft: '640',
         description: '+ 107 Sq. Ft. w/Balcony 747 Sf. Ft.',

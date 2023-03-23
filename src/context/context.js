@@ -14,7 +14,7 @@ const AppContext = ({ children }) => {
 
     // Suites section
     const [activeSuite, setActiveSuite] = useState("C1");
-    const [favouriteSuites, setFavouriteSuites] = useState([]);
+    const [favouriteSuites, setFavouriteSuites] = useState(suitesData);
     const [suites, setSuites] = useState(suitesData);
 
     // Neighbourhood Tour section
@@ -60,10 +60,6 @@ const AppContext = ({ children }) => {
         filterSuites();
     }, [userSettings]);
 
-    useEffect(() => {
-        console.log(userSettings);
-    }, [userSettings]);
-
     // Filter mapItems based on active category and set active items to activeNeighbourhoodTourItems
     const filterMapItems = () => {
         const currentCategory = mapItems.filter(cat => cat.name === currentNeighbourhoodTourCategory);
@@ -75,18 +71,21 @@ const AppContext = ({ children }) => {
         filterMapItems();
     }, [currentNeighbourhoodTourCategory]);
 
+
     // Toggle suite in favourites
     const toggleFavourite = (suite) => {
-        const suiteIsFavourited = favouriteSuites.find(item => item.id === suite.id) ? true : false;
+        let arr = [];
 
-        if (suiteIsFavourited) {
-            const arr = favouriteSuites.filter(item => item.id !== suite.id);
-            setFavouriteSuites(arr);
+        const isFav = favouriteSuites.filter(s => s.id === suite.id).length === 0 ? false : true;
+
+        if (isFav) {
+            favouriteSuites.forEach(s => s.id !== suite.id && arr.push(s));
         } else {
-            const arr = favouriteSuites;
+            favouriteSuites.forEach(suite => arr.push(suite));
             arr.push(suite);
-            setFavouriteSuites(arr);
         }
+
+        setFavouriteSuites(arr);
     }
 
     return (

@@ -28,7 +28,7 @@ function App() {
         <div className="container">
             <div className="content">
               {currentSection === 'home' && <HomePage setCurrentSection={setCurrentSection} />}
-              {currentSection === 'suites' && <SuitesPage/>}
+              {currentSection === 'suites' && <SuitesPage />}
               {currentSection === 'propertyTour' && <PropertyTourPage />}
               {currentSection === 'neighbourhoodTour' && <NeighbourhoodTourPage />}
               {currentSection === 'gallery' && <GalleryPage />}

@@ -372,6 +372,34 @@
         }
     }
 
+    &__favourites {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        font-family: 'Apercu Pro Bold', sans-serif;
+        overflow: hidden;
+
+        &--menu {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            column-gap: 25px;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            z-index: 2;
+        }
+
+        &.active {
+            display: flex;
+            animation: 0.5s suitesContainerFadeIn ease-in-out;
+        }
+    }
+
     &__container {
         display: none;
         justify-content: center;
