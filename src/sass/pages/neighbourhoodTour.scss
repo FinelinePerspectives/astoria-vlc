@@ -6,26 +6,26 @@
     transition: 0.5s background;
 
     &[data-category="Restaurants & Cafes"] {
-        $colour: #c8b273;
+        $colour: #58585B;
         background: $colour;
         @include infoWindowArrow($colour);
     }
     
     &[data-category="Lifestyle"] {
-        $colour: #BAA5CC;
+        $colour: #BAA58585B5CC;
         background: $colour;
         @include infoWindowArrow($colour);
     }
 
     &[data-category="Shopping"] {
-        $colour: #C7C7C7;
+        $colour: #58585B;
         background: $colour;
         @include infoWindowArrow($colour);
 
     }
 
     &[data-category="Parks & Trails"] {
-        $colour: #BFD0CA;
+        $colour: #58585B;
         background: $colour;
         @include infoWindowArrow($colour);
 

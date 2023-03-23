@@ -191,6 +191,7 @@
         position: relative;
         height: 100%;
         width: 100%;
+        max-width: 2374px;
         background: #fff;
 
         display: flex;
@@ -238,13 +239,13 @@
             justify-content: flex-end;
             align-items: flex-start;
             height: 1582px;
-            width: 2374px;
+            width: 2374px !important;
     
             iframe {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
+                width: 2374px !important;
                 height: 100%;
                 z-index: 1;
             }
