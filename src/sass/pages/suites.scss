@@ -534,6 +534,14 @@
         color: #fff;
         position: relative;
 
+        &--favourite {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            height: 15px;
+            width: 15px;
+        }
+
         &.active {
             &::after {
                 content: '';
@@ -551,7 +559,7 @@
         align-items: center;
 
         p {
-            font-size: 30px;
+            font-size: 24px;
         }
 
         &[data-bg="lightgrey"] {

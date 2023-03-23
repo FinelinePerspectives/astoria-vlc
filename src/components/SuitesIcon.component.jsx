@@ -1,9 +1,13 @@
 import { useContext } from 'react';
 import { Context } from '../context/context';
 
+import HeartIcon from '../assets/svg/heart.svg';
+
 const SuitesIcon = ({ suite, isActive }) => {
     const { id, dataBG } = suite;
-    const { activeSuite, setActiveSuite } = useContext(Context);
+    const { activeSuite, setActiveSuite, favouriteSuites } = useContext(Context);
+
+    const suiteIsFav = favouriteSuites.find(s => s.id === suite.id) ? true : false;
 
     const classes = ['suites__icon'];
     id === activeSuite && classes.push('active')
@@ -13,6 +17,7 @@ const SuitesIcon = ({ suite, isActive }) => {
     return (
         <div className={classes.join(' ')} data-bg={dataBG} onClick={selectActiveSuite}>
             <p>{id}</p>
+            {suiteIsFav && <img className="suites__icon--favourite" src={HeartIcon} alt="Favourite" />}
         </div>
     )
 }
