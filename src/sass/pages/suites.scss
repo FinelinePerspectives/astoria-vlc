@@ -353,6 +353,16 @@
                     background-image: url('../../assets/svg/icon-compare-active.svg');
                     @include suitesActionBtn();
                 }
+
+                &.disable {
+                    opacity: 0.25;
+                    background-image: url('../../assets/svg/icon-compare.svg');
+                    @include suitesActionBtn();
+                    &:hover {
+                        background-image: url('../../assets/svg/icon-compare.svg');
+                        @include suitesActionBtn();        
+                    }    
+                }
             }
 
             &[data-action="virtualtour"] {
@@ -375,12 +385,71 @@
     &__favourites {
         display: none;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         position: relative;
         height: 100%;
         width: 100%;
         font-family: 'Apercu Pro Bold', sans-serif;
-        overflow: hidden;
+        padding: 50px;
+
+        &--swiper {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            column-gap: 50px;
+            overflow-x: scroll;
+            padding-bottom: 35px;
+
+            width: 3140px;
+
+            &::-webkit-scrollbar {
+                padding: 50px;
+                border-radius: 45px;
+                background: #fff;
+                height: 90px;
+                border: 15px solid #fff;
+              }
+              
+              &::-webkit-scrollbar-track {
+                background: #fff;
+                border-radius: 45px;
+              }
+              
+              &::-webkit-scrollbar-thumb {
+                background: #d9dada;
+                border-radius: 45px;
+                border: 15px solid #fff;
+
+              }
+        }
+
+        &--card {
+            padding: 50px;
+            height: 1480px;
+            width: 1014px;
+            background: #fff;
+            flex: 0 0 1014px;
+
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            row-gap: 50px;
+        }
+
+        &--floorplan {
+            width: 767px;
+            height: 1009px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
 
         &--menu {
             display: flex;

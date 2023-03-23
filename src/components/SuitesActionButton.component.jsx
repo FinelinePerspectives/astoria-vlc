@@ -1,6 +1,11 @@
-const SuitesActionButton = ({ action, callback, link, isActive }) => {
+const SuitesActionButton = ({ action, callback, link, isActive, disable }) => {
     const classes = ['suites__actions--btn'];
+    disable && classes.push('disable');
     isActive && classes.push('active');
+
+    if (disable) {
+        return <div className={classes.join(' ')} data-action={action} /> 
+    }
 
     switch (action) {
         case 'print':

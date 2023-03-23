@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Context } from "../context/context";
 import SuitesActionButton from "./SuitesActionButton.component";
+import SuitesFavouritesCard from "./SuitesFavouritesCard.component";
 
 const SuitesFavourites = ({ setCurrentSubsection, isActive }) => {
     const classes = ['suites__favourites'];
@@ -13,9 +14,12 @@ const SuitesFavourites = ({ setCurrentSubsection, isActive }) => {
             <SuitesActionButton action="email" />
             <SuitesActionButton action="close" callback={() => setCurrentSubsection('suites')} />
         </div>
-        {favouriteSuites.map(suite => {
-            return <p>{suite.id} {suite.title}</p>
-        })}
+       
+       <div className="suites__favourites--swiper">
+            {favouriteSuites.map(suite => {
+                return <SuitesFavouritesCard suite={suite} />
+            })}
+       </div>
     </div>
 }
 

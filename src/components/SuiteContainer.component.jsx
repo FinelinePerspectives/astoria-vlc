@@ -43,7 +43,7 @@ const SuiteContainer = ({ setCurrentSubsection, suite, isActive }) => {
                 <SuitesActionButton action="email" isActive={emailFloorplanActive} callback={() => setEmailFloorplanActive(true)} />
                 <SuitesActionButton isActive={suiteIsFav} action="favourite" callback={() => toggleFavourite(suite)} />
                 {pdf && <SuitesActionButton action="print" link={`https://finelineperspectives.dev/astoria/pdf/${pdf}`} />}
-                <SuitesActionButton action="compare" callback={() => setCurrentSubsection('favourites')} />
+                <SuitesActionButton action="compare" callback={() => setCurrentSubsection('favourites')} disable={favouriteSuites.length <= 1} />
                 {renderVrTourButton()}
             </div>
 
