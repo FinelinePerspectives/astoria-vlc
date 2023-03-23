@@ -1,18 +1,6 @@
-<?php header('Access-Control-Allow-Origin: *'); ?>
 <?php
+	require 'PHPMailerAutoload.php';
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-/* Exception class. */
-require 'Exception.php';
-
-/* The main PHPMailer class. */
-require 'PHPMailer.php';
-
-/* SMTP class, needed if you want to use SMTP. */
-require 'SMTP.php';
-	
 	$mail = new PHPMailer;
 
 	$user_FirstName = filter_var($_POST["userFirstName"], FILTER_SANITIZE_STRING);
@@ -26,7 +14,6 @@ require 'SMTP.php';
 	
 	$mail->setFrom($user_fromEmail);
 	$mail->addAddress($user_Email);     // Add a recipient
-	$htmlText;
 	
 	for ($ct = 0; $ct < count($fileatt); $ct++ ) {
 		$attachFile	= filter_var($_POST["floorPlanAttachment"][$ct], FILTER_SANITIZE_STRING);
@@ -37,20 +24,12 @@ require 'SMTP.php';
 		$virtualTourLink = filter_var($_POST["vrLinks"][$i], FILTER_SANITIZE_STRING);
 		$unitNumber = filter_var($_POST["unitNumbers"][$i], FILTER_SANITIZE_STRING);
 	
-		$vrLink .= "<li><a href='$virtualTourLink'> $unitNumber</a></li>" ;
+		$vrLink .= "<li><a href='$virtualTourLink'>$unitNumber</a></li>";
 	}
 
-
-	if(!filter_var($user_Email, FILTER_VALIDATE_EMAIL)) //email validation
-	{
-		header('HTTP/1.1 500 Please enter a valid email!');
-		exit();
-	}
-
-        // Add attachments
-	$mail->isHTML(true);                                  // Set email format to HTML
+	$mail->isHTML(true);                             
 	
-	$mail->Subject = 'Floor Plan from Civic 66';
+	$mail->Subject = 'Floorplans from Astoria';
 	$email_body =	
 	'
 		   <html>
@@ -66,24 +45,17 @@ require 'SMTP.php';
 				<p>
 					
 				<p>
-					Attached are the floorplans you requested from Civic 66. Feel free to contact me with any additional questions.
+					Attached are the floorplans you requested from Astoria. Feel free to contact me with any additional questions.
 					If your favourite units have virtual tours, the link(s) to tours will show up here: <br /> <ul>'.$vrLink.'</ul>
+					<br />
 					<br />
 				
 					'.$notes.'
-				
-					
-
-					
-					
-
 				</p>
 				
 				<p>'.$user_fromEmail.'</p>
 			
 			</div>
-
-
 
 			</body>
 			</html>
@@ -93,10 +65,10 @@ require 'SMTP.php';
 	
 
 	if(!$mail->send()) {
-		echo 'Message could not be sent.';
+		echo 'Floorplans could not be sent.';
 		echo $user_Email;
 		echo 'Mailer Error: ' . $mail->ErrorInfo;
 	} else {
-		echo 'Message has been sent';
+		echo 'Floorplans have been sent!';
 	
 	}

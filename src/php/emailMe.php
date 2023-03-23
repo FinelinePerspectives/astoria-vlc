@@ -17,7 +17,7 @@
 	$mail->addAttachment($fileatt);         // Add attachments
 	$mail->isHTML(true);                                  // Set email format to HTML
 	
-	$mail->Subject = 'Floor Plan from Astoria';
+	$mail->Subject = 'Floorplan from Astoria';
 	
 	$email_body =	
 	'
@@ -57,9 +57,9 @@
 	$mail->Body = $email_body;
 	
 	if(!$mail->send()) {
-		echo 'Message could not be sent.';
+		echo 'Flooplan could not be sent.';
 		echo $user_Email;
 		echo 'Mailer Error: ' . $mail->ErrorInfo;
 	} else {
-		echo 'Message has been sent';
+		echo 'Floorplan has been sent!';
 	}
