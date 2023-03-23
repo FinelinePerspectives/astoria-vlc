@@ -69,9 +69,16 @@ section {
     width: 100%;
 }
 
+.popup-overlay {
+    height: 2170px;
+}
+
 .popup-content {
-    height: 1500px;
-    width: 3000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 1500px;
+    max-width: 3000px;
     border: none;
-    background: none;
+    background: transparent;
 }

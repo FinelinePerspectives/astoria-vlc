@@ -60,6 +60,10 @@ const AppContext = ({ children }) => {
         filterSuites();
     }, [userSettings]);
 
+    useEffect(() => {
+        console.log(userSettings);
+    }, [userSettings]);
+
     // Filter mapItems based on active category and set active items to activeNeighbourhoodTourItems
     const filterMapItems = () => {
         const currentCategory = mapItems.filter(cat => cat.name === currentNeighbourhoodTourCategory);

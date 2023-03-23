@@ -1,6 +1,7 @@
+import EmailFloorplanPopup from "./EmailFloorplanPopup.component";
 import SuitesActionButton from "./SuitesActionButton.component";
 
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../context/context";
 import SuiteInfo from "./SuiteInfo.component";
 import SuiteFloorplan from "./SuiteFloorplan.component";
@@ -8,7 +9,7 @@ import SuiteFloorplan from "./SuiteFloorplan.component";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
-const SuiteContainer = ({ suite, isActive, isFavourited }) => {
+const SuiteContainer = ({ suite, isActive }) => {
     const classes = ['suites__container'];
     isActive && classes.push('active');
 
@@ -16,6 +17,7 @@ const SuiteContainer = ({ suite, isActive, isFavourited }) => {
 
     const { toggleFavourite } = useContext(Context);
 
+    const [emailFloorplanActive, setEmailFloorplanActive] = useState(false);
     const [vrTourActive, setVrTourActive] = useState(false);
 
     const VrTourPopup = ({ close }) => {
@@ -27,7 +29,7 @@ const SuiteContainer = ({ suite, isActive, isFavourited }) => {
 
     const renderVrTourButton = () => {
         if (vrTour !== null && vrTour !== '') {
-            return <SuitesActionButton action="virtualtour" callback={() => setVrTourActive(true)} />
+            return <SuitesActionButton action="virtualtour" isActive={vrTourActive} callback={() => setVrTourActive(true)} />
         }
     }
     
@@ -36,14 +38,18 @@ const SuiteContainer = ({ suite, isActive, isFavourited }) => {
             <SuiteInfo section="suites" title={title} type={type} sqft={sqft} description={description} />
             
             <div className="suites__actions">
-                <SuitesActionButton action="email" />
-                <SuitesActionButton action="favourite" isActive={isFavourited} callback={() => toggleFavourite(suite)} />
-                {pdf && <SuitesActionButton action="print" link={pdf} />}
+                <SuitesActionButton action="email" isActive={emailFloorplanActive} callback={() => setEmailFloorplanActive(true)} />
+                <SuitesActionButton action="favourite" callback={() => toggleFavourite(suite)} />
+                {pdf && <SuitesActionButton action="print" link={`https://finelineperspectives.dev/astoria/pdf/${pdf}`} />}
                 <SuitesActionButton action="compare" />
                 {renderVrTourButton()}
             </div>
 
             <SuiteFloorplan floorplan={floorplan} title={title} section="suites" />
+
+            <Popup open={emailFloorplanActive} modal nested onClose={() => setEmailFloorplanActive(false)}>
+                {close => (<EmailFloorplanPopup vrTour={vrTour} pdf={pdf} close={close} />)}
+            </Popup>
 
             <Popup open={vrTourActive} modal nested onClose={() => setVrTourActive(false)}>
                 {close => (<VrTourPopup close={close} />)}

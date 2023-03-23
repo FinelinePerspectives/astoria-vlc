@@ -29,7 +29,7 @@ export const suitesData = [
         hasVrTour: false,
         vrTour: '',
         dataBG: 'lightgrey',
-        pdf: 'https://finelineperspectives.dev/astoria/pdf/test.pdf'
+        pdf: 'test.pdf'
     },
     {
         id: "C2",
@@ -53,7 +53,7 @@ export const suitesData = [
         isAccessible: true,
         dataBG: 'purple',
         hasVrTour: false,
-        pdf: 'https://finelineperspectives.dev/astoria/pdf/test.pdf',
+        pdf: 'test.pdf',
         vrTour: null
     },
     {
@@ -79,5 +79,6 @@ export const suitesData = [
         hasVrTour: true,
         vrTour: 'https://finelinevirtualtours.com/1804/210/',
         dataBG: 'gold',
+        pdf: 'test.pdf',
     }
 ]
