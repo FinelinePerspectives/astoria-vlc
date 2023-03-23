@@ -8,8 +8,8 @@ import Button from '../components/Button.component';
 
 import axios from 'axios';
 
-const EmailFloorplanPopup = ({ close, vrTour, pdf }) => {
-    const { userSettings } = useContext(Context);
+const EmailFloorplanPopup = ({ section, title, close, vrTour, pdf }) => {
+    const { userSettings, favouriteSuites } = useContext(Context);
 
     const initFormStatus = {
         success: null,
@@ -56,21 +56,41 @@ const EmailFloorplanPopup = ({ close, vrTour, pdf }) => {
         }
     }
 
-    const handleSubmit = async () => {
+    const handleSubmit = async () => {        
+        let url;
         setFormStatus(initFormStatus);
         setFormProcessing(true);
 
         const data = new FormData();
-        const pdfLink = `../pdf/${pdf}`;
 
         data.append('userFirstName', userSettings.firstName);
         data.append('userLastName', userSettings.lastName);
         data.append('userEmail', userSettings.email);
         data.append('notes', userSettings.notes);
-        data.append( 'vrLink', vrTour);
-        data.append('floorPlanAttachment', pdfLink);
 
-        const url = 'https://www.finelineperspectives.dev/astoria/php/emailMe.php'
+
+        if (section === 'floorplan') {
+            const pdfLink = `../pdf/${pdf}`;
+            
+            data.append('floorPlanAttachment', pdfLink);
+            data.append('vrLink', vrTour);
+
+            url = 'https://www.finelineperspectives.dev/astoria/php/emailMe.php';
+        } else if (section === 'favourites') {
+            const pdfLinks = [];
+            const vrLinks = [];
+            const unitNums = [];
+
+            favouriteSuites.forEach((suite) => {pdfLinks.push(`../pdf/${suite.pdf}`)});
+            favouriteSuites.forEach((suite) => {if (suite.vrTour && suite.vrTour !== '') vrLinks.push(suite.vrTour)});
+            favouriteSuites.forEach((suite) => {if (suite.vrTour && suite.vrTour !== '') unitNums.push(suite.id)});
+
+            data.append('floorPlanAttachment', pdfLinks);
+            data.append('vrLinks', vrLinks);
+            data.append('unitNumbers', unitNums);
+
+            url = 'https://www.finelineperspectives.dev/astoria/php/emailMeFavs.php';
+        }
 
         const config = {
             headers: {
@@ -89,7 +109,7 @@ const EmailFloorplanPopup = ({ close, vrTour, pdf }) => {
         <div className="suites__popup" data-popup="email">
             <SuitesActionButton action="close" callback={() => close()} />
             <div className="suites__popup--col" data-popup="emailbg">
-                <h2>Email Floorplan</h2>
+                <h2>{title}</h2>
             </div>
 
             <div className="suites__popup--col" data-popup="emailform">

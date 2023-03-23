@@ -52,9 +52,9 @@ export const suitesData = [
         hasWalkInCloset: true,
         isAccessible: true,
         dataBG: 'purple',
-        hasVrTour: false,
+        hasVrTour: true,
+        vrTour: 'https://finelinevirtualtours.com/1804/210/',
         pdf: 'test.pdf',
-        vrTour: null
     },
     {
         id: "C3",

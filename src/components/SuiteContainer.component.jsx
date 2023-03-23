@@ -50,7 +50,7 @@ const SuiteContainer = ({ setCurrentSubsection, suite, isActive }) => {
             <SuiteFloorplan floorplan={floorplan} title={title} section="suites" />
 
             <Popup open={emailFloorplanActive} modal nested onClose={() => setEmailFloorplanActive(false)}>
-                {close => (<EmailFloorplanPopup vrTour={vrTour} pdf={pdf} close={close} />)}
+                {close => (<EmailFloorplanPopup section="floorplan" title="Email Floorplan" vrTour={vrTour} pdf={pdf} close={close} />)}
             </Popup>
 
             <Popup open={vrTourActive} modal nested onClose={() => setVrTourActive(false)}>
