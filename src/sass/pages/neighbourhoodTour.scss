@@ -12,7 +12,7 @@
     }
     
     &[data-category="Lifestyle"] {
-        $colour: #BAA58585B5CC;
+        $colour: #58585B;
         background: $colour;
         @include infoWindowArrow($colour);
     }

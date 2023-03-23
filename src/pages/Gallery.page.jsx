@@ -20,7 +20,7 @@ const Gallery = () => {
     return (
         <section className="gallery">
             <div className="gallery__container">
-                {galleryItems.map((item, i) => <GalleryItem key={i+1} name={item.name + ` ${i+1}`} image={item.image} openLightboxOnSlide={openLightboxOnSlide} slide={i+1} />)}
+                {galleryItems.map((item, i) => <GalleryItem key={i+1} name={item.name} image={item.image} openLightboxOnSlide={openLightboxOnSlide} slide={i+1} />)}
             </div>
 
             <FsLightbox
