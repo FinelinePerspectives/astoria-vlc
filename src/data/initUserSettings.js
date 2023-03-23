@@ -1,9 +1,9 @@
 export const initUserSettings = {
-    firstName: 'f',
-    lastName: 'f',
-    postalCode: 'f',
+    firstName: 'Ryan',
+    lastName: 'Peterson',
+    postalCode: 'K1H 8N5',
     email: 'rpeterson@finelineperspectives.com',
-    notes: '',
+    notes: 'Hi!!',
     livingStyle: '',
     numOfBeds: '',
     sqftRange: '',

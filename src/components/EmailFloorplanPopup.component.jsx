@@ -1,7 +1,7 @@
 import PopupTextInput from "./PopupTextInput.component";
 import SuitesActionButton from "./SuitesActionButton.component";
 
-import { Fragment, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../context/context";
 
 import Button from '../components/Button.component';
@@ -11,10 +11,12 @@ import axios from 'axios';
 const EmailFloorplanPopup = ({ close, vrTour, pdf }) => {
     const { userSettings } = useContext(Context);
 
-    const [formStatus, setFormStatus] = useState({
+    const initFormStatus = {
         success: null,
         error: null,
-    });
+    }
+
+    const [formStatus, setFormStatus] = useState(initFormStatus);
     const [formProcessing, setFormProcessing] = useState(false);
 
     const handleFormStatus = (state, message) => {
@@ -32,6 +34,7 @@ const EmailFloorplanPopup = ({ close, vrTour, pdf }) => {
                 <PopupTextInput type="email" name="email" placeholder="Email" value={userSettings.email} />
                 <PopupTextInput type="textarea" name="notes" placeholder="Notes" value={userSettings.notes} />
                 <Button copy="Send" callback={() => handleSubmit()} />
+                {formStatus.error && <p>{formStatus.error}</p>}
             </div>
         )
     }
@@ -40,7 +43,21 @@ const EmailFloorplanPopup = ({ close, vrTour, pdf }) => {
         return <p>Sending floorplan to <br/>{userSettings.email}...</p>
     }
 
+    const onFormSuccess = () => {
+        setTimeout(() => close(), 1000);
+        return <p>{formStatus.success}</p>
+    }
+
+    const renderFormContent = () => {
+        if (formStatus.success) {
+            return onFormSuccess();
+        } else {
+            return formProcessing ? renderFormSubmitting() : renderFormFields();
+        }
+    }
+
     const handleSubmit = async () => {
+        setFormStatus(initFormStatus);
         setFormProcessing(true);
 
         const data = new FormData();
@@ -76,7 +93,7 @@ const EmailFloorplanPopup = ({ close, vrTour, pdf }) => {
             </div>
 
             <div className="suites__popup--col" data-popup="emailform">
-                {formProcessing ? renderFormSubmitting() : renderFormFields()}
+                {renderFormContent()}
             </div>
         </div>
     )
