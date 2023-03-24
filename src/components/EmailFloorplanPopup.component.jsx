@@ -73,21 +73,17 @@ const EmailFloorplanPopup = ({ section, title, close, vrTour, pdf }) => {
             const pdfLink = `../pdf/${pdf}`;
             
             data.append('floorPlanAttachment', pdfLink);
-            data.append('vrLink', vrTour);
-
-            url = 'https://www.finelineperspectives.dev/astoria/php/emailMe.php';
+            
+            if (vrTour !== '') {
+                data.append('vrLink', vrTour);
+                url = 'https://www.finelineperspectives.dev/astoria/php/emailMe.php';
+            } else {
+                url = 'https://www.finelineperspectives.dev/astoria/php/emailMeNoVR.php';
+            }
         } else if (section === 'favourites') {
-            const pdfLinks = [];
-            const vrLinks = [];
-            const unitNums = [];
-
-            favouriteSuites.forEach((suite) => {pdfLinks.push(`../pdf/${suite.pdf}`)});
-            favouriteSuites.forEach((suite) => {if (suite.vrTour && suite.vrTour !== '') vrLinks.push(suite.vrTour)});
-            favouriteSuites.forEach((suite) => {if (suite.vrTour && suite.vrTour !== '') unitNums.push(suite.id)});
-
-            data.append('floorPlanAttachment', pdfLinks);
-            data.append('vrLinks', vrLinks);
-            data.append('unitNumbers', unitNums);
+            favouriteSuites.forEach((suite) => {data.append('floorPlanAttachment[]', `../pdf/${suite.pdf}`)});
+            favouriteSuites.forEach((suite) => {if (suite.vrTour && suite.vrTour !== '') data.append('vrLinks[]', suite.vrTour)});
+            favouriteSuites.forEach((suite) => {if (suite.vrTour && suite.vrTour !== '') data.append('unitNumbers[]', suite.title)});
 
             url = 'https://www.finelineperspectives.dev/astoria/php/emailMeFavs.php';
         }

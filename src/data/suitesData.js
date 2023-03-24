@@ -54,7 +54,7 @@ export const suitesData = [
         dataBG: 'purple',
         hasVrTour: true,
         vrTour: 'https://finelinevirtualtours.com/1804/210/',
-        pdf: 'test.pdf',
+        pdf: 'test3.pdf',
     },
     {
         id: "C3",
@@ -79,6 +79,6 @@ export const suitesData = [
         hasVrTour: true,
         vrTour: 'https://finelinevirtualtours.com/1804/210/',
         dataBG: 'gold',
-        pdf: 'test.pdf',
+        pdf: 'test2.pdf',
     }
 ]
