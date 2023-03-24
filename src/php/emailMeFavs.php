@@ -15,12 +15,12 @@
 	$mail->setFrom($user_fromEmail);
 	$mail->addAddress($user_Email);     // Add a recipient
 	
-	for ($ct = 0; $ct < count($fileatt); $ct++ ) {
+	for ( $ct = 0; $ct < count($fileatt); $ct++ ) {
 		$attachFile	= filter_var($_POST["floorPlanAttachment"][$ct], FILTER_SANITIZE_STRING);
 		$mail->addAttachment($attachFile);
 	}
 	
-	for( $i = 0; $i < count($vrLinks); $i++) {
+	for( $i = 0; $i < count($vrLinks); $i++ ) {
 		$virtualTourLink = filter_var($_POST["vrLinks"][$i], FILTER_SANITIZE_STRING);
 		$unitNumber = filter_var($_POST["unitNumbers"][$i], FILTER_SANITIZE_STRING);
 	
