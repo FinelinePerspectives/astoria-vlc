@@ -11,7 +11,7 @@ import { initUserSettings } from '../data/initUserSettings';
 
 
 const SuitesFloorsMenu = ({ currentSubsection, currentFloor, setCurrentFloor, setCurrentSubsection }) => {
-    const { userSettings, setUserSettings, suites, activeSuite, setFavouriteSuites } = useContext(Context);    
+    const { userSettings, setUserSettings, suites, setFavouriteSuites } = useContext(Context);    
 
     const dropdowns = filterDropdowns.filter(drop => drop.section !== 'home');
 

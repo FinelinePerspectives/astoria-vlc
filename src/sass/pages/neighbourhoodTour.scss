@@ -5,6 +5,39 @@
     background: #fff;
     transition: 0.5s background;
 
+    &__sectionMenu {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 3;
+    }
+
+    &__section {
+        height: 100%;
+        width: 100%;
+        display: none;
+        transition: opacity 0.5s ease-in-out;
+
+        &.active {
+            display: flex;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        &Menu {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            column-gap: 25px;
+        }
+
+        &[data-section="orbit"] {
+            justify-content: center;
+            align-items: center;
+            background: #d9dada;
+        }
+    }
+
     &[data-category="Restaurants & Cafes"] {
         $colour: #58585B;
         background: $colour;

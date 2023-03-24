@@ -358,6 +358,36 @@
             width: 105px;
             border-radius: 5px;
 
+            &[data-action="map"] {
+                background-image: url('../../assets/svg/icon-neighbourhoodtour.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-neighbourhoodtour-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-neighbourhoodtour-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="orbit"] {
+                background-image: url('../../assets/svg/icon-googleorbit.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-googleorbit-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-googleorbit-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
             &[data-action="close"] {
                 background-image: url('../../assets/svg/icon-close.svg');
                 @include suitesActionBtn();
