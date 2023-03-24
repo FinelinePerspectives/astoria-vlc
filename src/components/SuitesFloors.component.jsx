@@ -1,4 +1,5 @@
 import { floors } from '../data/floors';
+import SuitesTypeFilter from '../components/SuitesTypeFilter.component';
 
 const SuitesFloors = ({ currentSubsection, currentFloor }) => {
     const classes = ['suites__content'];
@@ -25,6 +26,7 @@ const SuitesFloors = ({ currentSubsection, currentFloor }) => {
 
     return (
         <div className={classes.join(' ')} data-subsection="floors">
+            <SuitesTypeFilter />
             {floors.map(floor => renderFloor(floor))}
         </div>
     )

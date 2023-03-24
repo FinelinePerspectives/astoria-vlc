@@ -6,6 +6,8 @@ import { filterDropdowns, filterCheckboxes } from '../data/filterData';
 import { suitesData } from '../data/suitesData';
 import mapItems from '../data/mapItems';
 
+import { initActiveSuiteTypeFilters } from '../data/initActiveSuiteTypeFilters';
+
 export const Context = createContext(null);
 
 const AppContext = ({ children }) => {
@@ -14,6 +16,7 @@ const AppContext = ({ children }) => {
 
     // Suites section
     const [activeSuite, setActiveSuite] = useState("C1");
+    const [activeSuiteTypeFilters, setActiveSuiteTypeFilters] = useState(initActiveSuiteTypeFilters)
     const [favouriteSuites, setFavouriteSuites] = useState([]);
     const [suites, setSuites] = useState(suitesData);
 
@@ -71,7 +74,6 @@ const AppContext = ({ children }) => {
         filterMapItems();
     }, [currentNeighbourhoodTourCategory]);
 
-
     // Toggle suite in favourites
     const toggleFavourite = (suite) => {
         let arr = [];
@@ -94,6 +96,7 @@ const AppContext = ({ children }) => {
                 userSettings, setUserSettings,
                 suites, setSuites,
                 activeSuite, setActiveSuite,
+                activeSuiteTypeFilters, setActiveSuiteTypeFilters,
                 favouriteSuites, setFavouriteSuites, toggleFavourite,
                 mapCoords, setMapCoords,
                 activeNeighbourhoodTourItems, setActiveNeighbourhoodTourItems,

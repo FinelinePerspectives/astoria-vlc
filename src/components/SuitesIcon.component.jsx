@@ -3,7 +3,7 @@ import { Context } from '../context/context';
 
 import HeartIcon from '../assets/svg/heart.svg';
 
-const SuitesIcon = ({ suite, isActive }) => {
+const SuitesIcon = ({ suite }) => {
     const { id, dataBG } = suite;
     const { activeSuite, setActiveSuite, favouriteSuites } = useContext(Context);
 
