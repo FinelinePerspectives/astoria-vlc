@@ -8,10 +8,10 @@ import SuitesFloorsMenu from '../components/SuitesFloorsMenu.component';
 import SuitesFavourites from '../components/SuitesFavourites.component';
 
 const SuitesPage = () => {    
-    const [ currentSubsection, setCurrentSubsection ] = useState('favourites');
+    const [ currentSubsection, setCurrentSubsection ] = useState('suites');
     const [ currentFloor, setCurrentFloor ] = useState('groundFloor');
 
-    const { userSettings, setUserSettings, suites, activeSuite, setFavouriteSuites } = useContext(Context);    
+    const { suites, activeSuite } = useContext(Context);    
 
     return (
         <section className="suites">

@@ -14,7 +14,7 @@ const AppContext = ({ children }) => {
 
     // Suites section
     const [activeSuite, setActiveSuite] = useState("C1");
-    const [favouriteSuites, setFavouriteSuites] = useState(suitesData);
+    const [favouriteSuites, setFavouriteSuites] = useState([]);
     const [suites, setSuites] = useState(suitesData);
 
     // Neighbourhood Tour section
