@@ -1,6 +1,46 @@
 .propertyTour {
     height: 100%;
     width: 100%;
+    position: relative;
+
+    &__section {
+        height: 100%;
+        width: 100%;
+        background: #58585B;
+
+        display: none;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.25s ease-in-out;
+
+        &.active {
+            display: flex;
+            transition: all 0.25s ease-in-out;
+        }
+
+        &Menu {
+            background: #d9dada;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            column-gap: 25px;
+            padding: 25px;
+
+            &--wrapper {
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
 
     img {
         height: 100%;

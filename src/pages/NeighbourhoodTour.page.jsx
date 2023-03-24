@@ -1,7 +1,7 @@
 import { useContext, useState} from "react";
 import { Context } from '../context/context';
 
-import NeighbourhoodTourOrbit from "../components/NeighbourhoodTourOrbit.component";
+import NeighbourhoodTourGoogleOrbit from "../components/NeighbourhoodTourGoogleOrbit.component";
 import NeighbourhoodTourMapContainer from "../components/NeighbourhoodTourMapContainer.component";
 import SuitesActionButton from "../components/SuitesActionButton.component";
 
@@ -14,13 +14,13 @@ const NeighbourhoodTour = () => {
 
     return (
         <section className="neighbourhoodTour" data-category={currentNeighbourhoodTourCategory}>
-            <div className="neighbourhoodTour__sectionMenu">
+            <div className="neighbourhoodTour__sectionMenu--wrapper">
                 <SuitesActionButton action="map" callback={() => setCurrentSubsection('map')} isActive={currentSubsection === 'map'} />
-                <SuitesActionButton action="orbit" callback={() => setCurrentSubsection('orbit')} isActive={currentSubsection === 'orbit'} />
+                <SuitesActionButton action="orbit" callback={() => setCurrentSubsection('googleorbit')} isActive={currentSubsection === 'googleorbit'} />
             </div>
 
             <NeighbourhoodTourMapContainer isActive={currentSubsection === 'map'} />
-           <NeighbourhoodTourOrbit isActive={currentSubsection === 'orbit'} />
+           <NeighbourhoodTourGoogleOrbit isActive={currentSubsection === 'googleorbit'} />
         </section>
     )
 }
