@@ -373,7 +373,7 @@
                 }
             }
 
-            &[data-action="googleorbit"] {
+            &[data-action="orbit"] {
                 background-image: url('../../assets/svg/icon-googleorbit.svg');
                 @include suitesActionBtn();
                 

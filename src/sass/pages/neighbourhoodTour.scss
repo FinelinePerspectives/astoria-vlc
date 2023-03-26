@@ -6,10 +6,16 @@
     transition: 0.5s background;
 
     &__sectionMenu {
-        position: absolute;
-        top: 50px;
-        left: 50px;
-        z-index: 3;
+        &--wrapper {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 3;
+
+            display: flex;
+            flex-flow: row nowrap;
+            column-gap: 25px;
+        }
     }
 
     &__section {
