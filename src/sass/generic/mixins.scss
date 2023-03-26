@@ -32,7 +32,7 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
         padding-bottom: 0 !important;
-        border-radius: 0;
+        border-radius: 25px;
     }
 
     .gm-style-iw-d {
@@ -48,19 +48,19 @@
 
 @mixin infoWindowArrow($colour) {
     .gm-style .gm-style-iw-tc::after {
-        background: $colour;
+        // background: $colour;
         filter: none;
         -webkit-filter: none;
     }
 }
 
 @mixin mapMarkerTheme($colour) {
-    .mapMarker__header, .mapMarker__times {
-        background: $colour !important;
-    }
+    // .mapMarker__header, .mapMarker__times {
+    //     background: $colour !important;
+    // }
 
     .mapMarker__time--image {
-        border: 2px solid $colour;
+        // border: 2px solid $colour;
         svg path { fill: $colour }
     }
 }

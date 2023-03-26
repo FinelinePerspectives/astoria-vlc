@@ -108,32 +108,57 @@
 
     &__list {
         &[data-category="Restaurants & Cafes"] {
-            .neighbourhoodTour__list--header, .neighbourhoodTour__item--number {
+            .neighbourhoodTour__list--header {
                 background: #c8b273;
+            }
+
+            .neighbourhoodTour__item--number {
+                color: #c8b273;
+                border: 1px solid #c8b273;
             }
         }
         
         &[data-category="Lifestyle"] {
-            .neighbourhoodTour__list--header, .neighbourhoodTour__item--number {
+            .neighbourhoodTour__list--header {
                 background: #BAA5CC;
+            }
+
+            .neighbourhoodTour__item--number {
+                p {color: #BAA5CC;}
+                border: 1px solid #BAA5CC;
             }
         }
 
         &[data-category="Shopping"] {
-            .neighbourhoodTour__list--header, .neighbourhoodTour__item--number {
+            .neighbourhoodTour__list--header {
                 background: #C7C7C7;
+            }
+
+            .neighbourhoodTour__item--number {
+                p {color: #C7C7C7;}
+                border: 1px solid #C7C7C7;
             }
         }
 
         &[data-category="Parks & Trails"] {
-            .neighbourhoodTour__list--header, .neighbourhoodTour__item--number {
+            .neighbourhoodTour__list--header {
                 background: #BFD0CA;
+            }
+
+            .neighbourhoodTour__item--number {
+                p {color: #BFD0CA;}
+                border: 1px solid #BFD0CA;
             }
         }
 
         &[data-category="Transit"] {
-            .neighbourhoodTour__list--header, .neighbourhoodTour__item--number {
+            .neighbourhoodTour__list--header {
                 background: #58585B;
+            }
+
+            .neighbourhoodTour__item--number {
+                p {color: #58585B;}
+                border: 1px solid #58585B;
             }
         }
 
@@ -189,7 +214,6 @@
             p {
                 height: 60px;
                 width: 60px;
-                color: white;
                 display: flex;
                 justify-content: center;
                 align-items: center;

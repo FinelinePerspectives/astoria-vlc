@@ -22,12 +22,12 @@ const MapMarker = () => {
                 options={{ pixelOffset: new window.google.maps.Size(0, -40) }} 
         >
             <div className="mapMarker__info" data-category={currentNeighbourhoodTourCategory}>
-                <div className="mapMarker__header">
-                    <span>{activeMapItem.title}</span>
-                </div>
-
                 <a href={`${googleMapsBaseURL}${coords.lat},${coords.lng}`} className="mapMarker__image" target="_blank" rel="noreferrer">
                     <img src={activeMapItem.image} alt={activeMapItem.title} />
+
+                    <div className="mapMarker__header">
+                        <span>{activeMapItem.title}</span>
+                    </div>
                 </a>
 
                 <div className="mapMarker__times">
