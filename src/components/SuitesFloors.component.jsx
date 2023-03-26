@@ -29,10 +29,6 @@ const SuitesFloors = ({ currentSubsection, currentFloor }) => {
                 <div className="suites__keyplan" onClick={() => setPopupActive(true)}>
                     <img src={keyplan} alt="" />
                 </div>
-
-                <Popup open={popupActive} modal nested onClose={() => setPopupActive(false)}>
-                    {close => (<SuitesFloorplanPopup close={close} id="C1" />)}
-                </Popup>
             </div>
         )
     }
@@ -41,6 +37,10 @@ const SuitesFloors = ({ currentSubsection, currentFloor }) => {
         <div className={classes.join(' ')} data-subsection="floors">
             <SuitesTypeFilter />
             {floors.map(floor => renderFloor(floor))}
+
+            <Popup open={popupActive} modal nested onClose={() => setPopupActive(false)}>
+                {close => (<SuitesFloorplanPopup close={close} id="C1" />)}
+            </Popup>
         </div>
     )
 }
