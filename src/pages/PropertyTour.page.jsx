@@ -3,10 +3,9 @@ import Button from '../components/Button.component';
 
 import PropertyTourOrbit from '../components/PropertyTourOrbit.component';
 import PropertyTourSeasonalSunlight from '../components/PropertyTourSeasonalSunlight.component';
-import SuitesActionButton from '../components/SuitesActionButton.component';
 
 const PropertyTour = () => {
-    const [currentSubsection, setCurrentSubsection] = useState('orbit');
+    const [currentSubsection, setCurrentSubsection] = useState('seasonalsunlight');
 
     return (
         <section className="propertyTour">

@@ -3,10 +3,35 @@
     width: 100%;
     position: relative;
 
+    &__seasonalSunlight {
+        &--menu {
+            height: 90px;
+            width: auto;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            column-gap: 25px;
+            z-index: 2;
+
+            &[data-menu='directions'] {
+                position: absolute;
+                bottom: 100px;
+                left: 50px;
+            }
+
+            &[data-menu='seasons'] {
+                position: absolute;
+                bottom: 100px;
+                right: 50px;
+            }
+        }
+    }
+
     &__section {
         height: 100%;
         width: 100%;
-        background: #58585B;
+        background: #c7c7c7;
 
         display: none;
         flex-flow: row nowrap;

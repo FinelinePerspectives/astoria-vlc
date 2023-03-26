@@ -487,6 +487,126 @@
                     @include suitesActionBtn();
                 }
             }
+
+            &[data-action="north"] {
+                background-image: url('../../assets/svg/icon-north.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-north-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-north-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="east"] {
+                background-image: url('../../assets/svg/icon-east.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-east-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-east-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="south"] {
+                background-image: url('../../assets/svg/icon-south.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-south-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-south-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="west"] {
+                background-image: url('../../assets/svg/icon-west.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-west-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-west-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="spring"] {
+                background-image: url('../../assets/svg/icon-spring.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-spring-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-spring-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="summer"] {
+                background-image: url('../../assets/svg/icon-summer.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-summer-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-summer-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="fall"] {
+                background-image: url('../../assets/svg/icon-fall.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-fall-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-fall-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
+
+            &[data-action="winter"] {
+                background-image: url('../../assets/svg/icon-winter.svg');
+                @include suitesActionBtn();
+                
+                &:hover {
+                    background-image: url('../../assets/svg/icon-winter-active.svg');
+                    @include suitesActionBtn();
+                }
+                
+                &.active {
+                    background-image: url('../../assets/svg/icon-winter-active.svg');
+                    @include suitesActionBtn();
+                }
+            }
         }
     }
 

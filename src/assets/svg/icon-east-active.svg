@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="91" viewBox="0 0 90 91">
+  <g id="Group_219" data-name="Group 219" transform="translate(-1804 320)">
+    <g id="Rectangle_267" data-name="Rectangle 267" transform="translate(1804 -320)" fill="#c8b273" stroke="#c8b273" stroke-width="3">
+      <path d="M11,0H77A13,13,0,0,1,90,13V80A11,11,0,0,1,79,91H11A11,11,0,0,1,0,80V11A11,11,0,0,1,11,0Z" stroke="none"/>
+      <path d="M11,1.5H77A11.5,11.5,0,0,1,88.5,13V80A9.5,9.5,0,0,1,79,89.5H11A9.5,9.5,0,0,1,1.5,80V11A9.5,9.5,0,0,1,11,1.5Z" fill="none"/>
+    </g>
+    <g id="Group_148" data-name="Group 148" transform="translate(22 -415)">
+      <path id="Light" d="M10.626,0V-1.408H3.234V-7.48H9.768V-8.888H3.234v-5.764h6.974V-16.06H1.716V0Z" transform="translate(1838 149)" fill="#fcfeff"/>
+    </g>
+    <path id="Ellipse_27" data-name="Ellipse 27" d="M15,1A14,14,0,0,0,5.1,24.9,14,14,0,1,0,24.9,5.1,13.908,13.908,0,0,0,15,1m0-1A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z" transform="translate(1824 -289)" fill="#fcfeff"/>
+    <path id="Path_175" data-name="Path 175" d="M1793.854,594.717l-7.711-7.866a.5.5,0,0,1,.714-.7l6.994,7.134,6.921-7.132a.5.5,0,0,1,.718.7Z" transform="translate(1250.174 1519.814) rotate(-90)" fill="#fcfeff"/>
+  </g>
+</svg>
