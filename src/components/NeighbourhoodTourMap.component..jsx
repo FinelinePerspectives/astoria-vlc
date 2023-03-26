@@ -3,7 +3,6 @@ import { GoogleMap, MarkerF, useJsApiLoader } from "@react-google-maps/api";
 import { useContext } from "react";
 import { Context } from '../context/context';
 import MapMarker from './MapMarker.component';
-import { useState, useEffect } from 'react';
 
 import markerRestaurants from '../assets/svg/markerRestaurants.svg';
 import markerParks from '../assets/svg/markerParks.svg';
@@ -22,7 +21,7 @@ const NeighbourhoodTourMap = () => {
 
     const { isLoaded } = useJsApiLoader({
         googleMapsApiKey: '',
-//     googleMapsApiKey: 'AIzaSyBeGZ5ha4FkhvwlVte4lW63pEvaVt2PViA'
+    // googleMapsApiKey: 'AIzaSyBeGZ5ha4FkhvwlVte4lW63pEvaVt2PViA'
     });
 
     const assignCurrentMapMarker = () => {
@@ -74,7 +73,7 @@ const NeighbourhoodTourMap = () => {
                         icon={marker}
                         cursor="pointer"
                         position={coords}
-                        key={i}
+                        key={Math.random()}
                         label={label}
                         onClick={() => setActiveMapItem(item)}
                     />)

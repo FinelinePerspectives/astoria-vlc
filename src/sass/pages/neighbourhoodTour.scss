@@ -46,33 +46,33 @@
 
     &[data-category="Restaurants & Cafes"] {
         $colour: #58585B;
-        background: $colour;
+        background: #c7c7c7;
         @include infoWindowArrow($colour);
     }
     
     &[data-category="Lifestyle"] {
         $colour: #58585B;
-        background: $colour;
+        background: #c7c7c7;
         @include infoWindowArrow($colour);
     }
 
     &[data-category="Shopping"] {
         $colour: #58585B;
-        background: $colour;
+        background: #c7c7c7;
         @include infoWindowArrow($colour);
 
     }
 
     &[data-category="Parks & Trails"] {
         $colour: #58585B;
-        background: $colour;
+        background: #c7c7c7;
         @include infoWindowArrow($colour);
 
     }
 
     &[data-category="Transit"] {
         $colour: #58585B;
-        background: $colour;
+        background: #c7c7c7;
         @include infoWindowArrow($colour);
 
     }
