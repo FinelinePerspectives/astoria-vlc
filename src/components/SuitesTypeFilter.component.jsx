@@ -21,9 +21,9 @@ const SuitesFloorsFilter = () => {
 
    return ( 
     <div className="suites__typeFilter">
-            <div className="suites__typeFilter--icon">
+            {/* <div className="suites__typeFilter--icon">
                 <img src={CloseIcon} alt="" onClick={() => setMenuActive(!menuActive)} />
-            </div>
+            </div> */}
 
             <div className={contentClasses.join(' ')}>
                 {activeSuiteTypeFilters.map((type, i) => {
