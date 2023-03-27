@@ -3,6 +3,7 @@ import { useState, useContext } from 'react';
 import { suitesData } from '../data/suitesData';
 import SuiteFloorplan from './SuiteFloorplan.component';
 import SuiteInfo from './SuiteInfo.component';
+import SuiteKeyplan from './SuiteKeyplan.component';
 
 import SuitesActionButton from './SuitesActionButton.component';
 import EmailFloorplanPopup from './EmailFloorplanPopup.component';
@@ -16,15 +17,16 @@ const SuitesFloorplanPopup = ({ close, id }) => {
     const [currentSubsection, setCurrentSubsection] = useState('floorplan');
 
     const suite = suitesData.find(s => s.id === id);
-    const { title, type, sqft, description, floorplan, pdf, vrTour } = suite;
+    const { title, type, sqft, description, floorplan, pdf, vrTour, keyplan } = suite;
 
     const suiteIsFav = favouriteSuites.find(s => s.id === suite.id) ? true : false;
 
     const FloorplanContent = () => (
-        <>
+        <div className="suites__popup--wrapper">
             <SuiteInfo section="suites" title={title} type={type} sqft={sqft} description={description} />
             <SuiteFloorplan floorplan={`https://finelineperspectives.dev/astoria/floorplans/${floorplan}`} title={title} section="suites" />
-        </>
+            <SuiteKeyplan section="popup" keyplan={`https://finelineperspectives.dev/astoria/keyplans/${keyplan}`} />
+        </div>
     )
 
     const MenuContent = () => (

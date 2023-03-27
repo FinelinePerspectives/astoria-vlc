@@ -1,12 +1,15 @@
 import { useContext, useState } from 'react';
 
+import { Context } from '../context/context';
+
 import { floors } from '../data/floors';
 import SuitesTypeFilter from '../components/SuitesTypeFilter.component';
+import SuitesFloorplanPopup from './SuitesFloorplanPopup.component';
+
+import SuiteKeyplan from './SuiteKeyplan.component';
 
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import SuitesFloorplanPopup from './SuitesFloorplanPopup.component';
-import { Context } from '../context/context';
 
 
 const SuitesFloors = ({ currentSubsection, currentFloor }) => {
@@ -30,9 +33,7 @@ const SuitesFloors = ({ currentSubsection, currentFloor }) => {
                     <img src={floorplate} alt="" />
                 </div>
 
-                <div className="suites__keyplan" onClick={() => setPopupActive(true)}>
-                    <img src={keyplan} alt="" />
-                </div>
+                <SuiteKeyplan keyplan={keyplan} callback={() => setPopupActive(true)} />
             </div>
         )
     }
