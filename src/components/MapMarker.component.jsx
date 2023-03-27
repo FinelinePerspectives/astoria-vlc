@@ -23,7 +23,7 @@ const MapMarker = () => {
         >
             <div className="mapMarker__info" data-category={currentNeighbourhoodTourCategory}>
                 <a href={`${googleMapsBaseURL}${coords.lat},${coords.lng}`} className="mapMarker__image" target="_blank" rel="noreferrer">
-                    <img src={activeMapItem.image} alt={activeMapItem.title} />
+                    <img src={`https://www.finelineperspectives.dev/astoria/map/${activeMapItem.image}`} alt={activeMapItem.title} />
 
                     <div className="mapMarker__header">
                         <span>{activeMapItem.title}</span>

@@ -21,7 +21,7 @@ const AppContext = ({ children }) => {
     const [suites, setSuites] = useState(suitesData);
 
     // Neighbourhood Tour section
-    const [mapCoords, setMapCoords] = useState({ lat: 44.056061, lng: -79.4714572 })
+    const [mapCoords, setMapCoords] = useState({ lat: 45.3674337, lng: -75.739004 })
     const [currentNeighbourhoodTourCategory, setCurrentNeghbourhoodTourCategory] = useState('Restaurants & Cafes');
     const [activeNeighbourhoodTourItems, setActiveNeighbourhoodTourItems] = useState([]);
     const [activeMapItem, setActiveMapItem] = useState(null);

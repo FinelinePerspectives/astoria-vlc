@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { Context } from '../context/context';
 import MapMarker from './MapMarker.component';
 
+import AstoriaLogo from '../assets/svg/marker-astoria-grey.svg';
+
 import markerRestaurants from '../assets/svg/markerRestaurants.svg';
 import markerParks from '../assets/svg/markerParks.svg';
 import markerLifestyle from '../assets/svg/markerLifestyle.svg';
@@ -60,6 +62,7 @@ const NeighbourhoodTourMap = () => {
                 options={{ styles: googleMapStyles }}
             >
                 {activeMapItem && <MapMarker />}
+                {<MarkerF icon={AstoriaLogo} position={mapCoords} />}
                 {activeNeighbourhoodTourItems.map((item, i) => {
                     const { coords } = item;
                     const label = {

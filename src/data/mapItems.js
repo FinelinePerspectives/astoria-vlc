@@ -1,137 +1,809 @@
-import RestaurantImage1 from '../assets/images/map/location-restaurants-01.jpg';
-import RestaurantImage2 from '../assets/images/map/location-restaurants-02.jpg';
-import RestaurantImage3 from '../assets/images/map/location-restaurants-03.jpg';
-import RestaurantImage4 from '../assets/images/map/location-restaurants-04.jpg';
-import RestaurantImage5 from '../assets/images/map/location-restaurants-05.jpg';
-import RestaurantImage6 from '../assets/images/map/location-restaurants-06.jpg';
-import RestaurantImage7 from '../assets/images/map/location-restaurants-07.jpg';
-import RestaurantImage8 from '../assets/images/map/location-restaurants-08.jpg';
-import RestaurantImage9 from '../assets/images/map/location-restaurants-09.jpg';
-import RestaurantImage10 from '../assets/images/map/location-restaurants-10.jpg';
-import RestaurantImage11 from '../assets/images/map/location-restaurants-11.jpg';
-import RestaurantImage12 from '../assets/images/map/location-restaurants-12.jpg';
-import RestaurantImage13 from '../assets/images/map/location-restaurants-13.jpg';
-import RestaurantImage14 from '../assets/images/map/location-restaurants-14.jpg';
-import RestaurantImage15 from '../assets/images/map/location-restaurants-15.jpg';
-import RestaurantImage16 from '../assets/images/map/location-restaurants-16.jpg';
-
-import LifestyleImage1 from '../assets/images/map/location-lifestyle-01.jpg';
-import LifestyleImage2 from '../assets/images/map/location-lifestyle-02.jpg';
-import LifestyleImage3 from '../assets/images/map/location-lifestyle-03.jpg';
-import LifestyleImage4 from '../assets/images/map/location-lifestyle-04.jpg';
-import LifestyleImage5 from '../assets/images/map/location-lifestyle-05.jpg';
-import LifestyleImage6 from '../assets/images/map/location-lifestyle-06.jpg';
-import LifestyleImage7 from '../assets/images/map/location-lifestyle-07.jpg';
-import LifestyleImage8 from '../assets/images/map/location-lifestyle-08.jpg';
-import LifestyleImage9 from '../assets/images/map/location-lifestyle-09.jpg';
-import LifestyleImage10 from '../assets/images/map/location-lifestyle-10.jpg';
-import LifestyleImage11 from '../assets/images/map/location-lifestyle-11.jpg';
-import LifestyleImage12 from '../assets/images/map/location-lifestyle-12.jpg';
-
-
-import ParksAndTrailsImage1 from '../assets/images/map/location-parks-01.jpg';
-import ParksAndTrailsImage2 from '../assets/images/map/location-parks-02.jpg';
-import ParksAndTrailsImage3 from '../assets/images/map/location-parks-03.jpg';
-import ParksAndTrailsImage4 from '../assets/images/map/location-parks-04.jpg';
-import ParksAndTrailsImage5 from '../assets/images/map/location-parks-05.jpg';
-import ParksAndTrailsImage6 from '../assets/images/map/location-parks-06.jpg';
-import ParksAndTrailsImage7 from '../assets/images/map/location-parks-07.jpg';
-import ParksAndTrailsImage8 from '../assets/images/map/location-parks-08.jpg';
-import ParksAndTrailsImage9 from '../assets/images/map/location-parks-09.jpg';
-
-
-import ShoppingImage1 from '../assets/images/map/location-shopping-01.jpg';
-import ShoppingImage2 from '../assets/images/map/location-shopping-02.jpg';
-import ShoppingImage3 from '../assets/images/map/location-shopping-03.jpg';
-import ShoppingImage4 from '../assets/images/map/location-shopping-04.jpg';
-import ShoppingImage5 from '../assets/images/map/location-shopping-05.jpg';
-import ShoppingImage6 from '../assets/images/map/location-shopping-06.jpg';
-import ShoppingImage7 from '../assets/images/map/location-shopping-07.jpg';
-import ShoppingImage8 from '../assets/images/map/location-shopping-08.jpg';
-import ShoppingImage9 from '../assets/images/map/location-shopping-09.jpg';
-import ShoppingImage10 from '../assets/images/map/location-shopping-10.jpg';
-import ShoppingImage11 from '../assets/images/map/location-shopping-11.jpg';
-
-
-import TransitImage1 from '../assets/images/map/location-transit-01.jpg';
-import TransitImage2 from '../assets/images/map/location-transit-02.jpg';
-
 const mapItems = [
     {
-        name: 'Restaurants & Cafes',
-        items: [
-            {id: '1', title: 'BB Café',image:RestaurantImage1,coords:{lat:44.0528655445706, lng:-79.477916019228},walkTime:14, bikeTime:3,driveTime:3},
-            {id: '2', title: 'Bene Bene Waffle & Ice Cream',image:RestaurantImage2,coords:{lat:44.0523726748068, lng:-79.4567205400485},walkTime:32, bikeTime:10,driveTime:6},
-            {id: '3', title: 'Cachet Supper Club',image:RestaurantImage3,coords:{lat:44.0514174770456, lng:-79.4557092590821},walkTime:25, bikeTime:8,driveTime:5},
-            {id: '4', title: 'Café Hesed',image:RestaurantImage4,coords:{lat:44.0520483537226, lng:-79.4559716958725},walkTime:24, bikeTime:8,driveTime:4},
-            {id: '5', title: 'Chip and Malt',image:RestaurantImage5,coords:{lat:44.0533543510021, lng:-79.4569325093669},walkTime:22, bikeTime:8,driveTime:6},
-            {id: '6', title: 'Grey Goat Pub & Grill',image:RestaurantImage6,coords:{lat:44.0567383439521, lng:-79.4596906443109},walkTime:18, bikeTime:6,driveTime:3},
-            {id: '7', title: 'Ground Burger Bar',image:RestaurantImage7,coords:{lat:44.0522576186686, lng:-79.4556983572356},walkTime:25, bikeTime:8,driveTime:5},
-            {id: '8', title: 'Hungrey Brew Hops',image:RestaurantImage8,coords:{lat:44.0531044946654, lng:-79.4569402995652},walkTime:22, bikeTime:8,driveTime:4},
-            {id: '9', title: 'KUMA RAMEN',image:RestaurantImage9,coords:{lat:44.0673785647098, lng:-79.4821451977187},walkTime:26, bikeTime:8,driveTime:6},
-            {id: '10', title: 'Moxie\'s Grill & Bar',image:RestaurantImage10,coords:{lat:44.0532866558498, lng:-79.4754331471114},walkTime:11, bikeTime:5,driveTime:3},
-            {id: '11', title: 'Olde Village Free House',image:RestaurantImage11,coords:{lat:44.0534721796588, lng:-79.4570985749925},walkTime:21, bikeTime:7,driveTime:4},
-            {id: '12', title: 'On the Rice',image:RestaurantImage12,coords:{lat:44.0551283896165, lng:-79.4732367014117},walkTime:4, bikeTime:1,driveTime:2},
-            {id: '13', title: 'Sociable Pub',image:RestaurantImage13,coords:{lat:44.051599090076, lng:-79.4807115879172},walkTime:12, bikeTime:4,driveTime:4},
-            {id: '14', title: 'The Goulash House',image:RestaurantImage14,coords:{lat:44.0532199328873, lng:-79.457621059082},walkTime:21, bikeTime:8,driveTime:4},
-            {id: '15', title: 'The Maids Cottage',image:RestaurantImage15,coords:{lat:44.0527617223688, lng:-79.4567739725765},walkTime:22, bikeTime:8,driveTime:4},
-            {id: '48', title: 'Market & Co.',image:RestaurantImage16,coords:{lat:44.05668048, lng:-79.483913494463},walkTime:16, bikeTime:4,driveTime:7}
+        "name": "Restaurants & Cafes",
+        "items": [
+            {
+                "id": 1,
+                "title": "Dao Café",
+                "coords": {
+                    "lat": 45.35301,
+                    "lng": -75.73525
+                },
+                "walkTime": 27,
+                "bikeTime": 8,
+                "driveTime": 7,
+                "transitTime": 15,
+                "image": "location-restaurants-01.jpg"
+            },
+            {
+                "id": 2,
+                "title": "Swiss Chalet",
+                "coords": {
+                    "lat": 45.34959,
+                    "lng": -75.73344
+                },
+                "walkTime": 34,
+                "bikeTime": 10,
+                "driveTime": 8,
+                "transitTime": 18,
+                "image": "location-restaurants-02.jpg"
+            },
+            {
+                "id": 3,
+                "title": "Tim Hortons",
+                "coords": {
+                    "lat": 45.37045,
+                    "lng": -75.73256
+                },
+                "walkTime": 7,
+                "bikeTime": 2,
+                "driveTime": 3,
+                "transitTime": 4,
+                "image": "location-restaurants-03.jpg"
+            },
+            {
+                "id": 4,
+                "title": "Starbucks",
+                "coords": {
+                    "lat": 45.36251,
+                    "lng": -75.73539
+                },
+                "walkTime": 12,
+                "bikeTime": 4,
+                "driveTime": 4,
+                "transitTime": 10,
+                "image": "location-restaurants-04.jpg"
+            },
+            {
+                "id": 5,
+                "title": "Lone Star Texas Grill",
+                "coords": {
+                    "lat": 45.37083,
+                    "lng": -75.71692
+                },
+                "walkTime": 26,
+                "bikeTime": 8,
+                "driveTime": 5,
+                "transitTime": 19,
+                "image": "location-restaurants-05.jpg"
+            },
+            {
+                "id": 6,
+                "title": "Nando's PERi-PERi",
+                "coords": {
+                    "lat": 45.36152,
+                    "lng": -75.73366
+                },
+                "walkTime": 15,
+                "bikeTime": 6,
+                "driveTime": 4,
+                "transitTime": 9,
+                "image": "location-restaurants-06.jpg"
+            },
+            {
+                "id": 7,
+                "title": "Bridgehead",
+                "coords": {
+                    "lat": 45.3708,
+                    "lng": -75.76855
+                },
+                "walkTime": 54,
+                "bikeTime": 19,
+                "driveTime": 11,
+                "transitTime": 26,
+                "image": "location-restaurants-07.jpg"
+            },
+            {
+                "id": 8,
+                "title": "Second Cup",
+                "coords": {
+                    "lat": 45.34488,
+                    "lng": -75.72961
+                },
+                "walkTime": 42,
+                "bikeTime": 13,
+                "driveTime": 10,
+                "transitTime": 20,
+                "image": "location-restaurants-08.jpg"
+            },
+            {
+                "id": 9,
+                "title": "Chances R Restaurant",
+                "coords": {
+                    "lat": 45.35035,
+                    "lng": -75.75868
+                },
+                "walkTime": 41,
+                "bikeTime": 16,
+                "driveTime": 9,
+                "transitTime": 22,
+                "image": "location-restaurants-091.jpg"
+            },
+            {
+                "id": 10,
+                "title": "La Casa Del Gusto",
+                "coords": {
+                    "lat": 45.36204,
+                    "lng": -75.73457
+                },
+                "walkTime": 12,
+                "bikeTime": 4,
+                "driveTime": 4,
+                "transitTime": 9,
+                "image": "location-restaurants-10.jpg"
+            },
+            {
+                "id": 11,
+                "title": "The Keg Steakhouse + Bar - Ottawa Manor",
+                "coords": {
+                    "lat": 45.38825,
+                    "lng": -75.76198
+                },
+                "walkTime": 51,
+                "bikeTime": 15,
+                "driveTime": 12,
+                "transitTime": 31,
+                "image": "location-restaurants-11.jpg"
+            },
+            {
+                "id": 12,
+                "title": "Montana's",
+                "coords": {
+                    "lat": 45.34579,
+                    "lng": -75.73004
+                },
+                "walkTime": 40,
+                "bikeTime": 14,
+                "driveTime": 10,
+                "transitTime": 17,
+                "image": "location-restaurants-12.jpg"
+            },
+            {
+                "id": 13,
+                "title": "Tutti Frutti breakfast & lunch",
+                "coords": {
+                    "lat": 45.36058,
+                    "lng": -75.73301
+                },
+                "walkTime": 16,
+                "bikeTime": 6,
+                "driveTime": 4,
+                "transitTime": 12,
+                "image": "location-restaurants-13.jpg"
+            },
+            {
+                "id": 14,
+                "title": "Barley Mow",
+                "coords": {
+                    "lat": 45.35576,
+                    "lng": -75.73496
+                },
+                "walkTime": 24,
+                "bikeTime": 8,
+                "driveTime": 6,
+                "transitTime": 15,
+                "image": "location-restaurants-14.jpg"
+            },
+            {
+                "id": 15,
+                "title": "Boston Pizza",
+                "coords": {
+                    "lat": 45.37952,
+                    "lng": -75.74837
+                },
+                "walkTime": 34,
+                "bikeTime": 11,
+                "driveTime": 7,
+                "transitTime": 20,
+                "image": "location-restaurants-15.jpg"
+            }
         ]
     },
     {
-        name: 'Shopping',
-        items: [
-            {id: '37', title: 'British Fine Foods & Bakery',image:ShoppingImage1,coords:{lat:44.0523395128121, lng:-79.4571279302469},walkTime:23, bikeTime:7,driveTime:4},
-            {id: '38', title: 'Chapters',image:ShoppingImage2,coords:{lat:44.0529199302936, lng:-79.4816053572357},walkTime:12, bikeTime:4,driveTime:4},
-            {id: '39', title: 'Farm Boy',image:ShoppingImage3,coords:{lat:44.068840970472, lng:-79.4826189831537},walkTime:29, bikeTime:8,driveTime:7},
-            {id: '40', title: 'Hempen Jewellers',image:ShoppingImage4,coords:{lat:44.0527193294852, lng:-79.4570983619611},walkTime:22, bikeTime:8,driveTime:4},
-            {id: '41', title: 'Hudsons Bay',image:ShoppingImage5,coords:{lat:44.0558668012024, lng:-79.4873911616408},walkTime:20, bikeTime:6,driveTime:5},
-            {id: '42', title: 'NOMI Handcrafted Jewellery and Gifts',image:ShoppingImage6,coords:{lat:44.0518464228456, lng:-79.4565188437412},walkTime:24, bikeTime:8,driveTime:4},
-            {id: '43', title: 'Nutmeg Bakeshop',image:ShoppingImage7,coords:{lat:44.0517095900615, lng:-79.4565411166055},walkTime:24, bikeTime:8,driveTime:5},
-            {id: '44', title: 'Unwind Yarn',image:ShoppingImage8,coords:{lat:44.0523299514329, lng:-79.4570360205647},walkTime:22, bikeTime:7,driveTime:4},
-            {id: '45', title: 'Upper Canada Mall',image:ShoppingImage9,coords:{lat:44.0563351350974, lng:-79.4850763688212},walkTime:11, bikeTime:3,driveTime:4},
-            {id: '46', title: 'Vince\'s Market at Market & Co.',image:ShoppingImage10,coords:{lat:44.0568325410475, lng:-79.4836887192411},walkTime:16, bikeTime:5,driveTime:6},
-            {id: '47', title: 'Winners',image:ShoppingImage11,coords:{lat:44.0632777115519, lng:-79.4850415587082},walkTime:22, bikeTime:7,driveTime:6}
+        "name": "Shopping",
+        "items": [
+            {
+                "id": 48,
+                "title": "Walmart Supercentre",
+                "coords": {
+                    "lat": 45.36376,
+                    "lng": -75.7384
+                },
+                "walkTime": 9,
+                "bikeTime": 2,
+                "driveTime": 4,
+                "transitTime": 1,
+                "image": "location-shopping-01.jpg"
+            },
+            {
+                "id": 49,
+                "title": "Loblaws",
+                "coords": {
+                    "lat": 45.36192,
+                    "lng": -75.73535
+                },
+                "walkTime": 12,
+                "bikeTime": 4,
+                "driveTime": 4,
+                "transitTime": 9,
+                "image": "location-shopping-02.jpg"
+            },
+            {
+                "id": 50,
+                "title": "Shoppers Drug Mart",
+                "coords": {
+                    "lat": 45.36048,
+                    "lng": -75.73436
+                },
+                "walkTime": 33,
+                "bikeTime": 11,
+                "driveTime": 6,
+                "transitTime": 20,
+                "image": "location-shopping-03.jpg"
+            },
+            {
+                "id": 51,
+                "title": "Food Basics",
+                "coords": {
+                    "lat": 45.3605,
+                    "lng": -75.73298
+                },
+                "walkTime": 16,
+                "bikeTime": 6,
+                "driveTime": 4,
+                "transitTime": 10,
+                "image": "location-shopping-04.jpg"
+            },
+            {
+                "id": 52,
+                "title": "Thyme & Again",
+                "coords": {
+                    "lat": 45.37725,
+                    "lng": -75.75633
+                },
+                "walkTime": 34,
+                "bikeTime": 11,
+                "driveTime": 9,
+                "transitTime": 25,
+                "image": "location-shopping-05.jpg"
+            },
+            {
+                "id": 53,
+                "title": "Produce Depot",
+                "coords": {
+                    "lat": 45.37666,
+                    "lng": -75.75694
+                },
+                "walkTime": 34,
+                "bikeTime": 11,
+                "driveTime": 9,
+                "transitTime": 26,
+                "image": "location-shopping-06.jpg"
+            },
+            {
+                "id": 54,
+                "title": "Merivale Mall",
+                "coords": {
+                    "lat": 45.34526,
+                    "lng": -75.73143
+                },
+                "walkTime": 40,
+                "bikeTime": 14,
+                "driveTime": 7,
+                "transitTime": 16,
+                "image": "location-shopping-07.jpg"
+            },
+            {
+                "id": 55,
+                "title": "Farm Boy",
+                "coords": {
+                    "lat": 45.34645,
+                    "lng": -75.73192
+                },
+                "walkTime": 38,
+                "bikeTime": 14,
+                "driveTime": 7,
+                "transitTime": 17,
+                "image": "location-shopping-08.jpg"
+            },
+            {
+                "id": 56,
+                "title": "College Square Mall",
+                "coords": {
+                    "lat": 45.35065,
+                    "lng": -75.7602
+                },
+                "walkTime": 41,
+                "bikeTime": 16,
+                "driveTime": 8,
+                "transitTime": 24,
+                "image": "location-shopping-09.jpg"
+            },
+            {
+                "id": 57,
+                "title": "Carlingwood Shopping Centre",
+                "coords": {
+                    "lat": 45.37227,
+                    "lng": -75.76943
+                },
+                "walkTime": 46,
+                "bikeTime": 12,
+                "driveTime": 10,
+                "transitTime": 25,
+                "image": "location-shopping-10.jpg"
+            },
+            {
+                "id": 58,
+                "title": "Canadian Tire",
+                "coords": {
+                    "lat": 45.37891,
+                    "lng": -75.7491
+                },
+                "walkTime": 31,
+                "bikeTime": 10,
+                "driveTime": 7,
+                "transitTime": 17,
+                "image": "location-shopping-11.jpg"
+            },
+            {
+                "id": 59,
+                "title": "The Shoe Company",
+                "coords": {
+                    "lat": 45.35073,
+                    "lng": -75.73189
+                },
+                "walkTime": 33,
+                "bikeTime": 11,
+                "driveTime": 6,
+                "transitTime": 17,
+                "image": "location-shopping-12.jpg"
+            },
+            {
+                "id": 60,
+                "title": "Laura",
+                "coords": {
+                    "lat": 45.35012,
+                    "lng": -75.73123
+                },
+                "walkTime": 35,
+                "bikeTime": 11,
+                "driveTime": 7,
+                "transitTime": 18,
+                "image": "location-shopping-13.jpg"
+            },
+            {
+                "id": 61,
+                "title": "Nicastro Fine Foods",
+                "coords": {
+                    "lat": 45.35286,
+                    "lng": -75.73571
+                },
+                "walkTime": 27,
+                "bikeTime": 8,
+                "driveTime": 6,
+                "transitTime": 14,
+                "image": "location-shopping-14.jpg"
+            },
+            {
+                "id": 62,
+                "title": "Freshco",
+                "coords": {
+                    "lat": 45.35281,
+                    "lng": -75.73327
+                },
+                "walkTime": 29,
+                "bikeTime": 8,
+                "driveTime": 6,
+                "transitTime": 17,
+                "image": "location-shopping-15.jpg"
+            }
         ]
     },
     {
-        name: 'Lifestyle',
-        items: [
-            {id: '16', title: 'Elman W. Campbell Museum',image:LifestyleImage1,coords:{lat:44.0547885318662, lng:-79.4587241572356},walkTime:19, bikeTime:6,driveTime:4},
-            {id: '17', title: 'Mukti',image:LifestyleImage2,coords:{lat:44.0584353891856, lng:-79.4625884437412},walkTime:14, bikeTime:8,driveTime:5},
-            {id: '18', title: 'Newmarket Community Centre',image:LifestyleImage3,coords:{lat:44.0535107365547, lng:-79.4565581474341},walkTime:23, bikeTime:9,driveTime:6},
-            {id: '19', title: 'Newmarket Public Library',image:LifestyleImage4,coords:{lat:44.0533388932468, lng:-79.4587753382021},walkTime:20, bikeTime:6,driveTime:4},
-            {id: '20', title: 'Poodle Corner ',image:LifestyleImage5,coords:{lat:44.0523027030319, lng:-79.4568628879173},walkTime:23, bikeTime:8,driveTime:4},
-            {id: '21', title: 'St. Andrews Valley Golf Club',image:LifestyleImage6,coords:{lat:44.0219015198039, lng:-79.4569548879177},walkTime:0, bikeTime:20,driveTime:10},
-            {id: '22', title: 'Tim Hortons Skating and Water Feature ',image:LifestyleImage7,coords:{lat:44.0521952226637, lng:-79.4554667879173},walkTime:25, bikeTime:8,driveTime:5},
-            {id: '23', title: 'Gorman Public Outdoor Pool',image:LifestyleImage8,coords:{lat:44.0509449564781, lng:-79.4590432879172},walkTime:21, bikeTime:7,driveTime:5},
-            {id: '24', title: 'Southlake Regional Health Centre',image:LifestyleImage9,coords:{lat:44.0604779183497, lng:-79.4515991014115},walkTime:26, bikeTime:10,driveTime:6},
-            {id: '25', title: 'Energy Flow Yoga Studio',image:LifestyleImage10,coords:{lat:44.0539101725345, lng:-79.4576833646212},walkTime:20, bikeTime:7,driveTime:4},
-            {id: '26', title: 'The Hair Company',image:LifestyleImage11,coords:{lat:44.0525721116271, lng:-79.4566940014116},walkTime:23, bikeTime:8,driveTime:4},
-            {id: '27', title: 'Magna Recreation Centre',image:LifestyleImage12,coords:{lat:44.0437878469388, lng:-79.438824030247},walkTime:0, bikeTime:18,driveTime:9}
+        "name": "Lifestyle",
+        "items": [
+            {
+                "id": 18,
+                "title": "Ottawa Sport Medicine Centre",
+                "coords": {
+                    "lat": 45.3603,
+                    "lng": -75.73962
+                },
+                "walkTime": 17,
+                "bikeTime": 5,
+                "driveTime": 5,
+                "transitTime": 16,
+                "image": "location-lifestyle-01.jpg"
+            },
+            {
+                "id": 19,
+                "title": "Movati Athletic",
+                "coords": {
+                    "lat": 45.35371,
+                    "lng": -75.73171
+                },
+                "walkTime": 31,
+                "bikeTime": 10,
+                "driveTime": 8,
+                "transitTime": 19,
+                "image": "location-lifestyle-02.jpg"
+            },
+            {
+                "id": 20,
+                "title": "The Ottawa Hospital Civic Campus",
+                "coords": {
+                    "lat": 45.3929,
+                    "lng": -75.72173
+                },
+                "walkTime": 44,
+                "bikeTime": 16,
+                "driveTime": 8,
+                "transitTime": 24,
+                "image": "location-lifestyle-03.jpg"
+            },
+            {
+                "id": 21,
+                "title": "West Side Spa",
+                "coords": {
+                    "lat": 45.37037,
+                    "lng": -75.73328
+                },
+                "walkTime": 7,
+                "bikeTime": 2,
+                "driveTime": 2,
+                "transitTime": 3,
+                "image": "location-lifestyle-04.jpg"
+            },
+            {
+                "id": 22,
+                "title": "Planet Fitness",
+                "coords": {
+                    "lat": 45.34512,
+                    "lng": -75.7312
+                },
+                "walkTime": 40,
+                "bikeTime": 14,
+                "driveTime": 9,
+                "transitTime": 18,
+                "image": "location-lifestyle-05.jpg"
+            },
+            {
+                "id": 23,
+                "title": "Ottawa Public Library - Carlingwood",
+                "coords": {
+                    "lat": 45.37319,
+                    "lng": -75.77203
+                },
+                "walkTime": 51,
+                "bikeTime": 15,
+                "driveTime": 11,
+                "transitTime": 39,
+                "image": "location-lifestyle-06.jpg"
+            },
+            {
+                "id": 24,
+                "title": "Ottawa Public Library - Nepean Centrepointe",
+                "coords": {
+                    "lat": 45.34437,
+                    "lng": -75.76251
+                },
+                "walkTime": 54,
+                "bikeTime": 20,
+                "driveTime": 11,
+                "transitTime": 31,
+                "image": "location-lifestyle-07.jpg"
+            },
+            {
+                "id": 25,
+                "title": "Dovercourt Recreation Centre",
+                "coords": {
+                    "lat": 45.38338,
+                    "lng": -75.75288
+                },
+                "walkTime": 40,
+                "bikeTime": 13,
+                "driveTime": 10,
+                "transitTime": 28,
+                "image": "location-lifestyle-08.jpg"
+            },
+            {
+                "id": 26,
+                "title": "Algonquin College Ottawa Campus",
+                "coords": {
+                    "lat": 45.34992,
+                    "lng": -75.75493
+                },
+                "walkTime": 36,
+                "bikeTime": 15,
+                "driveTime": 7,
+                "transitTime": 20,
+                "image": "location-lifestyle-09.jpg"
+            },
+            {
+                "id": 27,
+                "title": "Tailgators",
+                "coords": {
+                    "lat": 45.34427,
+                    "lng": -75.73148
+                },
+                "walkTime": 42,
+                "bikeTime": 12,
+                "driveTime": 7,
+                "transitTime": 20,
+                "image": "location-lifestyle-10.jpg"
+            },
+            {
+                "id": 28,
+                "title": "Crestview Outdoor Pool",
+                "coords": {
+                    "lat": 45.3449,
+                    "lng": -75.73815
+                },
+                "walkTime": 43,
+                "bikeTime": 13,
+                "driveTime": 8,
+                "transitTime": 27,
+                "image": "location-lifestyle-11.jpg"
+            },
+            {
+                "id": 29,
+                "title": "DARA Tennis Club",
+                "coords": {
+                    "lat": 45.39137,
+                    "lng": -75.7115
+                },
+                "walkTime": 51,
+                "bikeTime": 17,
+                "driveTime": 8,
+                "transitTime": 33,
+                "image": "location-lifestyle-12.jpg"
+            },
+            {
+                "id": 30,
+                "title": "Elmdale Lawn Bowls Club",
+                "coords": {
+                    "lat": 45.39753,
+                    "lng": -75.72484
+                },
+                "walkTime": 53,
+                "bikeTime": 20,
+                "driveTime": 10,
+                "transitTime": 23,
+                "image": "location-lifestyle-13.jpg"
+            },
+            {
+                "id": 31,
+                "title": "Anytime Fitness Merivale",
+                "coords": {
+                    "lat": 45.35014,
+                    "lng": -75.73112
+                },
+                "walkTime": 35,
+                "bikeTime": 10,
+                "driveTime": 6,
+                "transitTime": 18,
+                "image": "location-lifestyle-14.jpg"
+            },
+            {
+                "id": 32,
+                "title": "Renu Massage Therapy and Spa",
+                "coords": {
+                    "lat": 45.39767,
+                    "lng": -75.74077
+                },
+                "walkTime": 52,
+                "bikeTime": 18,
+                "driveTime": 9,
+                "transitTime": 26,
+                "image": "location-lifestyle-16.jpg"
+            },
+            {
+                "id": 33,
+                "title": "Royal Canadian Legion Branch 480",
+                "coords": {
+                    "lat": 45.39118,
+                    "lng": -75.75617
+                },
+                "walkTime": 52,
+                "bikeTime": 17,
+                "driveTime": 10,
+                "transitTime": 27,
+                "image": "location-lifestyle-17.jpg"
+            }
         ]
     },
     {
-        name: 'Transit',
-        items: [
-            {id: '48', title: 'Newmarket GO',image:TransitImage1,coords:{lat:44.060398836102, lng:-79.4596492958724},walkTime:20, bikeTime:7,driveTime:4},
-            {id: '49', title: '50 & 55 Bus Stop ',image:TransitImage2,coords:{lat:44.0565082394852, lng:-79.4723436890393},walkTime:1, bikeTime:1,driveTime:0}
+        "name": "Transit",
+        "items": [
+            {
+                "id": 65,
+                "title": "Central Park/Staten Bus stop",
+                "coords": {
+                    "lat": 45.36741,
+                    "lng": -75.73768
+                },
+                "walkTime": 2,
+                "bikeTime": 1,
+                "driveTime": 1,
+                "transitTime": 1,
+                "image": "location-transit-01.jpg"
+            },
+            {
+                "id": 66,
+                "title": "Tunney's Pasture Station",
+                "coords": {
+                    "lat": 45.40372,
+                    "lng": -75.73519
+                },
+                "walkTime": 66,
+                "bikeTime": 26,
+                "driveTime": 12,
+                "transitTime": 31,
+                "image": "location-transit-02.jpg"
+            },
+            {
+                "id": 67,
+                "title": "Westboro Station",
+                "coords": {
+                    "lat": 45.39644,
+                    "lng": -75.75207
+                },
+                "walkTime": 52,
+                "bikeTime": 16,
+                "driveTime": 11,
+                "transitTime": 26,
+                "image": "location-transit-03.jpg"
+            },
+            {
+                "id": 68,
+                "title": "Baseline Station",
+                "coords": {
+                    "lat": 45.34778,
+                    "lng": -75.76179
+                },
+                "walkTime": 45,
+                "bikeTime": 14,
+                "driveTime": 9,
+                "transitTime": 24,
+                "image": "location-transit-04.jpg"
+            }
         ]
     },
     {
-        name: 'Parks & Trails',
-        items: [
-            {id: '28', title: 'ALL OUR KIDS (AOK) PLAYPARK',image:ParksAndTrailsImage1,coords:{lat:44.0552759581438, lng:-79.4554031437412},walkTime:25, bikeTime:8,driveTime:6},
-            {id: '29', title: 'Dave Kerwin Trail',image:ParksAndTrailsImage2,coords:{lat:44.0630623696409, lng:-79.4948404032578},walkTime:34, bikeTime:9,driveTime:8},
-            {id: '30', title: 'Environmental Park',image:ParksAndTrailsImage3,coords:{lat:44.0590582062232, lng:-79.4937925838572},walkTime:29, bikeTime:8,driveTime:6},
-            {id: '31', title: 'Fairy Lake Park',image:ParksAndTrailsImage4,coords:{lat:44.0514163340615, lng:-79.4547774437413},walkTime:26, bikeTime:8,driveTime:5},
-            {id: '32', title: 'Haskett Park',image:ParksAndTrailsImage5,coords:{lat:44.0524990336432, lng:-79.472163402027},walkTime:10, bikeTime:3,driveTime:2},
-            {id: '33', title: 'Mabel Davis Conservation Area',image:ParksAndTrailsImage6,coords:{lat:44.068066067355, lng:-79.4565988688835},walkTime:32, bikeTime:12,driveTime:6},
-            {id: '34', title: 'Tom Taylor Trail',image:ParksAndTrailsImage7,coords:{lat:44.0463353490239, lng:-79.4589388302469},walkTime:26, bikeTime:8,driveTime:5},
-            {id: '35', title: 'Veterans Memorial Park',image:ParksAndTrailsImage8,coords:{lat:44.0509334012143, lng:-79.4583602995653},walkTime:21, bikeTime:5,driveTime:4},
-            {id: '36', title: 'Wesley Brooks Conservation Area',image:ParksAndTrailsImage9,coords:{lat:44.0468001414484, lng:-79.4570496590821},walkTime:29, bikeTime:10,driveTime:7}
+        "name": "Parks & Trails",
+        "items": [
+            {
+                "id": 36,
+                "title": "General Burns Park",
+                "coords": {
+                    "lat": 45.3521,
+                    "lng": -75.72053
+                },
+                "walkTime": 40,
+                "bikeTime": 13,
+                "driveTime": 8,
+                "transitTime": 30,
+                "image": "location-parks-01.jpg"
+            },
+            {
+                "id": 37,
+                "title": "Carlington Heights Reservoir",
+                "coords": {
+                    "lat": 45.37221,
+                    "lng": -75.74146
+                },
+                "walkTime": 30,
+                "bikeTime": 12,
+                "driveTime": 8,
+                "transitTime": 19,
+                "image": "location-parks-02.jpg"
+            },
+            {
+                "id": 38,
+                "title": "Central Experimental Farm",
+                "coords": {
+                    "lat": 45.3875,
+                    "lng": -75.70916
+                },
+                "walkTime": 45,
+                "bikeTime": 14,
+                "driveTime": 9,
+                "transitTime": 39,
+                "image": "location-parks-03.jpg"
+            },
+            {
+                "id": 39,
+                "title": "Dominion Arboretum",
+                "coords": {
+                    "lat": 45.39113,
+                    "lng": -75.70616
+                },
+                "walkTime": 52,
+                "bikeTime": 17,
+                "driveTime": 12,
+                "transitTime": 38,
+                "image": "location-parks-04.jpg"
+            },
+            {
+                "id": 40,
+                "title": "Celebration Park",
+                "coords": {
+                    "lat": 45.3668,
+                    "lng": -75.7355
+                },
+                "walkTime": 3,
+                "bikeTime": 1,
+                "driveTime": 2,
+                "transitTime": 1,
+                "image": "location-parks-05.jpg"
+            },
+            {
+                "id": 41,
+                "title": "Dow's Lake",
+                "coords": {
+                    "lat": 45.39483,
+                    "lng": -75.70114
+                },
+                "walkTime": 67,
+                "bikeTime": 20,
+                "driveTime": 11,
+                "transitTime": 36,
+                "image": "location-parks-06.jpg"
+            },
+            {
+                "id": 42,
+                "title": "Commissioners Park",
+                "coords": {
+                    "lat": 45.39749,
+                    "lng": -75.70651
+                },
+                "walkTime": 60,
+                "bikeTime": 18,
+                "driveTime": 10,
+                "transitTime": 32,
+                "image": "location-parks-07.jpg"
+            },
+            {
+                "id": 43,
+                "title": "Hogs Back",
+                "coords": {
+                    "lat": 45.37306,
+                    "lng": -75.69101
+                },
+                "walkTime": 56,
+                "bikeTime": 16,
+                "driveTime": 10,
+                "transitTime": 33,
+                "image": "location-parks-08.jpg"
+            },
+            {
+                "id": 44,
+                "title": "Mooney's Bay",
+                "coords": {
+                    "lat": 45.36746,
+                    "lng": -75.69162
+                },
+                "walkTime": 59,
+                "bikeTime": 18,
+                "driveTime": 11,
+                "transitTime": 38,
+                "image": "location-parks-09.jpg"
+            },
+            {
+                "id": 45,
+                "title": "Vincent Massey Park",
+                "coords": {
+                    "lat": 45.37853,
+                    "lng": -75.69887
+                },
+                "walkTime": 54,
+                "bikeTime": 15,
+                "driveTime": 10,
+                "transitTime": 28,
+                "image": "location-parks-10.jpg"
+            }
         ]
-    },
-]
+    }
+];
 
 export default mapItems;
