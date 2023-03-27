@@ -243,6 +243,25 @@
             height: 742px;
 
             overflow-y: scroll;
+            position: relative;
+
+            &::-webkit-scrollbar {
+                border-radius: 50px;
+                background: #fff;
+                border: 2px solid #fff;
+              }
+              
+              &::-webkit-scrollbar-track {
+                background: #fff;
+                border-radius: 50px;
+              }
+              
+              &::-webkit-scrollbar-thumb {
+                background: #d9dada;
+                border-radius: 50px;
+                border: 15px solid #fff;
+
+              }
         }
 
         &--controls {
