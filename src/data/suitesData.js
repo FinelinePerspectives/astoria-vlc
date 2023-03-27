@@ -4,7 +4,6 @@ import Keyplan1 from '../assets/images/suiteskeyplan1.png';
 import Keyplan2 from '../assets/images/suiteskeyplan2.png';
 import Keyplan3 from '../assets/images/suiteskeyplan3.png';
 
-
 export const suitesData = [
     {
         id: "C1",
@@ -28,7 +27,7 @@ export const suitesData = [
         isAccessible: false,
         hasVrTour: false,
         vrTour: '',
-        dataBG: 'lightgrey',
+        dataBG: 'studio',
         pdf: 'test.pdf'
     },
     {
@@ -51,7 +50,7 @@ export const suitesData = [
         hasEnsuite: false,
         hasWalkInCloset: true,
         isAccessible: true,
-        dataBG: 'purple',
+        dataBG: '1bed',
         hasVrTour: true,
         vrTour: 'https://finelinevirtualtours.com/1804/210/',
         pdf: 'test3.pdf',
@@ -78,7 +77,57 @@ export const suitesData = [
         isAccessible: true,
         hasVrTour: true,
         vrTour: 'https://finelinevirtualtours.com/1804/210/',
-        dataBG: 'gold',
+        dataBG: '1bedden',
+        pdf: 'test2.pdf',
+    },
+    {
+        id: "C4",
+        title: 'C5 Unit Merry',
+        type: '1 Bed + Den',
+        sqft: '640',
+        description: '+ 107 Sq. Ft. w/Balcony 747 Sf. Ft.',
+        floorplan: Floorplan,
+        keyplans: [
+            Keyplan1,
+            Keyplan2,
+            Keyplan3
+        ],
+        numOfBeds: '1bed',
+        sqftRange: '600699',
+        numOfBaths: 'twobedroomden',
+        hasDen: true,
+        hasBalcony: false,
+        hasEnsuite: true,
+        hasWalkInCloset: false,
+        isAccessible: true,
+        hasVrTour: true,
+        vrTour: 'https://finelinevirtualtours.com/1804/210/',
+        dataBG: '2bed',
+        pdf: 'test2.pdf',
+    },
+    {
+        id: "C5",
+        title: 'C5 Unit Merry',
+        type: '1 Bed + Den',
+        sqft: '640',
+        description: '+ 107 Sq. Ft. w/Balcony 747 Sf. Ft.',
+        floorplan: Floorplan,
+        keyplans: [
+            Keyplan1,
+            Keyplan2,
+            Keyplan3
+        ],
+        numOfBeds: '1bed',
+        sqftRange: '600699',
+        numOfBaths: 'twobedroomden',
+        hasDen: true,
+        hasBalcony: false,
+        hasEnsuite: true,
+        hasWalkInCloset: false,
+        isAccessible: true,
+        hasVrTour: true,
+        vrTour: 'https://finelinevirtualtours.com/1804/210/',
+        dataBG: '2bedden',
         pdf: 'test2.pdf',
     }
 ]

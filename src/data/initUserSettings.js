@@ -11,7 +11,7 @@ export const initUserSettings = {
     hasDen: false,
     hasBalcony: false,
     hasEnsuite: false,
-    hasWalkInCloset: true,
+    hasWalkInCloset: false,
     isAccessible: false,
-    hasVirtualTour: true,
+    hasVirtualTour: false,
 };

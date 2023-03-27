@@ -234,14 +234,15 @@
         }
 
         &--units {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: repeat(4, 110px);
+            grid-auto-rows: 110px;
 
             row-gap: 10px;
             column-gap: 10px;
-            flex: 1;
+            height: 742px;
+
+            overflow-y: scroll;
         }
 
         &--controls {
@@ -830,23 +831,23 @@
             font-size: 24px;
         }
 
-        &[data-bg="lightgrey"] {
+        &[data-bg="studio"] {
             background: #C7C7C7;
         }
 
-        &[data-bg="gold"] {
+        &[data-bg="1bed"] {
             background: #C8B273;
         }
 
-        &[data-bg="darkgrey"] {
+        &[data-bg="1bedden"] {
             background: #58585B;
         }
 
-        &[data-bg="green"] {
+        &[data-bg="2bed"] {
             background: #BFD0CA;
         }
 
-        &[data-bg="purple"] {
+        &[data-bg="2bedden"] {
             background: #BAA5CC;
         }
     }
