@@ -13,8 +13,6 @@ import { initUserSettings } from '../data/initUserSettings';
 const SuitesFloorsMenu = ({ currentSubsection, currentFloor, setCurrentFloor, setCurrentSubsection }) => {
     const { userSettings, setUserSettings, suites, setFavouriteSuites } = useContext(Context);    
 
-    const dropdowns = filterDropdowns.filter(drop => drop.section !== 'home');
-
     const renderMenuFloorBtn = (floor) => {
         const { id, label } = floor;
 
@@ -42,7 +40,7 @@ const SuitesFloorsMenu = ({ currentSubsection, currentFloor, setCurrentFloor, se
                 <div className="suites__menu--suites">
                     <div className="suites__menu--dropdowns">
                         {
-                            dropdowns.map(dropdown => {
+                            filterDropdowns.map(dropdown => {
                                 return (<div className="suites__menu--dropdown" key={dropdown.id}>
                                     <FilterDropdown dropdown={dropdown} userSettings={userSettings} setUserSettings={setUserSettings} />
                                 </div>)

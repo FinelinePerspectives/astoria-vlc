@@ -18,7 +18,9 @@ const AppContext = ({ children }) => {
     const [activeSuite, setActiveSuite] = useState("C3");
     const [activeSuiteTypeFilters, setActiveSuiteTypeFilters] = useState(initActiveSuiteTypeFilters)
     const [favouriteSuites, setFavouriteSuites] = useState([]);
-    const [suites, setSuites] = useState(suitesData);
+
+    const sortedSuites = suitesData.sort((a, b) => a.id - b.id);
+    const [suites, setSuites] = useState(sortedSuites);
 
     // Neighbourhood Tour section
     const [mapCoords, setMapCoords] = useState({ lat: 45.3674337, lng: -75.739004 })

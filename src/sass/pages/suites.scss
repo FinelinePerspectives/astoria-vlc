@@ -756,7 +756,7 @@
 
         &--floorplan {
             height: 100%;
-            width: 1050px;
+            width: 1500px;
         
             img {
                 height: 100%;
@@ -765,27 +765,23 @@
                 object-position: center;
             }
         }
-        
 
-        &--keyplans {
+        &--keyplan {
+            flex: 1 0 30%;
+            width: 100%;
+
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
 
-            height: 1500px;
-            width: 400px;
+            height: 500px;
+            width: 500px;
 
             position: absolute;
             bottom: 50px;
             right: 50px;
 
-            z-index: 3;
-        }
-
-        &--keyplan {
-            flex: 1 0 30%;
-            width: 100%;
             
 
             img {
@@ -831,23 +827,23 @@
             font-size: 24px;
         }
 
-        &[data-bg="studio"] {
+        &[data-bg="twobed"] {
             background: #C7C7C7;
         }
 
-        &[data-bg="1bed"] {
+        &[data-bg="onebedden"] {
             background: #C8B273;
         }
 
-        &[data-bg="1bedden"] {
+        &[data-bg="studio"] {
             background: #58585B;
         }
 
-        &[data-bg="2bed"] {
+        &[data-bg="twobedden"] {
             background: #BFD0CA;
         }
 
-        &[data-bg="2bedden"] {
+        &[data-bg="onebed"] {
             background: #BAA5CC;
         }
     }

@@ -7,32 +7,32 @@ export const filterInputs = [
 
 export const filterDropdowns = [
     {
-        placeholder: 'What Style of Living Are You Interested In?',
+        placeholder: 'Living Style',
         id: 'livingStyle',
-        section: 'home',
         options: [
-            { label: 'Luxury Apartments', value: 'luxuryapartments' },
             { label: "Senior's Apartments", value: 'seniorsapartments' },
+            { label: 'Luxury Apartments', value: 'luxuryapartments' }
         ]
     },
     {
         placeholder: 'Number of Bedrooms',
         id: 'numOfBeds',
         options: [
-            { label: 'One Bedroom', value: 'onebedroom' },
-            { label: 'One Bedroom + Den', value: 'onebedroomden' },
-            { label: 'Two Bedroom', value: 'twobedroom' },
-            { label: 'Two Bedroom + Den', value: 'twobedroomden' },
+            { label: 'One Bedroom', value: 'onebed' },
+            { label: 'One Bedroom + Den', value: 'onebedden' },
+            { label: 'Two Bedroom', value: 'twobed' },
+            { label: 'Two Bedroom + Den', value: 'twobedden' },
         ]
     },
     {
         placeholder: 'Square Foot Range',
         id: 'sqftRange',
         options: [
-            { label: '500 sqft - 599 sqft', value: '500599' },
-            { label: '600 sqft - 699 sqft', value: '600699' },
-            { label: '700 sqft - 799 sqft', value: '700799' },
-            { label: '800 sqft - 899 sqft', value: '800899' },
+            { label: '500 sqft - 599 sqft', value: '500-599' },
+            { label: '600 sqft - 699 sqft', value: '600-699' },
+            { label: '700 sqft - 799 sqft', value: '700-799' },
+            { label: '800 sqft - 899 sqft', value: '800-899' },
+            { label: '900 sqft - 999 sqft', value: '900-999' },
         ]
     },
     {

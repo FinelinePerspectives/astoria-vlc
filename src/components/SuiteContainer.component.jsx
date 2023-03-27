@@ -15,7 +15,7 @@ const SuiteContainer = ({ setCurrentSubsection, suite, isActive }) => {
     const classes = ['suites__container'];
     isActive && classes.push('active');
 
-    const { title, type, sqft, description, floorplan, keyplans, pdf, vrTour } = suite;
+    const { title, type, sqft, description, floorplan, keyplan, pdf, vrTour } = suite;
 
     const { toggleFavourite, favouriteSuites } = useContext(Context);
 
@@ -36,7 +36,7 @@ const SuiteContainer = ({ setCurrentSubsection, suite, isActive }) => {
                 <VrTourButton vrTour={vrTour} isActive={vrTourActive} callback={() => setVrTourActive(true)} />
             </div>
 
-            <SuiteFloorplan floorplan={floorplan} title={title} section="suites" />
+            <SuiteFloorplan floorplan={`https://finelineperspectives.dev/astoria/floorplans/${floorplan}`} title={title} section="suites" />
 
             <Popup open={emailFloorplanActive} modal nested onClose={() => setEmailFloorplanActive(false)}>
                 {close => (<EmailFloorplanPopup section="floorplan" title="Email Floorplan" vrTour={vrTour} pdf={pdf} close={close} />)}
@@ -46,10 +46,8 @@ const SuiteContainer = ({ setCurrentSubsection, suite, isActive }) => {
                 {close => (<VrTourPopup title={title} vrTour={vrTour} close={close} />)}
             </Popup>
 
-            <div className="suites__container--keyplans">
-                {keyplans.map((keyplan, i) => <div className="suites__container--keyplan" key={i}>
-                    <img src={keyplan} alt="keyplan" />
-                </div>)}
+            <div className="suites__container--keyplan">
+                <img src={`https://finelineperspectives.dev/astoria/keyplans/${keyplan}`} alt="keyplan" />
             </div>
     </div>
     )
