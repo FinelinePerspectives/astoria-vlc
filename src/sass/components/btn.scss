@@ -2,9 +2,11 @@
     outline: none;
     border: none;
     background: none;
+    font-weight: 700;
 
-    padding: 30px;
-    border-radius: 50px;
+
+    padding: 35px 85px;
+    border-radius: 60px;
     font-size: inherit;
 
     background: #C8B273;
@@ -24,13 +26,25 @@
         }
     }
 
+    &-section {
+        background: #fff;
+        color: #58585B;
+        border: 5px solid #C7C7C7;
+        padding: 35px 85px;
+
+        &.active {
+            background: #C8B273;
+            color: #fff;
+            border: 5px solid #C8B273;
+        }
+    }
+
     &-menu {
         background: transparent;
         color: #58585B;
         box-shadow: none;
 
         font-family: nobel, sans-serif;
-        font-weight: 700;
         font-style: normal;
     
         &.active {

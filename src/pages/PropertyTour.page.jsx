@@ -11,8 +11,8 @@ const PropertyTour = () => {
         <section className="propertyTour">
             <div className="propertyTour__sectionMenu--wrapper">
                 <div className="propertyTour__sectionMenu">
-                    <Button copy="Property Orbit" callback={() => setCurrentSubsection('orbit')}/>
-                    <Button copy="Seasonal Sunlight" callback={() => setCurrentSubsection('seasonalsunlight')}/>
+                    <Button type="section" copy="Property Orbit" callback={() => setCurrentSubsection('orbit')} isActive={currentSubsection === 'orbit'} />
+                    <Button type="section" copy="Seasonal Sunlight" callback={() => setCurrentSubsection('seasonalsunlight')} isActive={currentSubsection === 'seasonalsunlight'} />
                 </div>
             </div>
           <PropertyTourOrbit isActive={currentSubsection === 'orbit'} />
