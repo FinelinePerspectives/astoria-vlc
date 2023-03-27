@@ -5,6 +5,8 @@ import { useContext, useState } from "react";
 import { Context } from "../context/context";
 import SuiteInfo from "./SuiteInfo.component";
 import SuiteFloorplan from "./SuiteFloorplan.component";
+import VrTourPopup from "./VrTourPopup.component";
+import VrTourButton from "./VrTourButton.component";
 
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
@@ -21,19 +23,6 @@ const SuiteContainer = ({ setCurrentSubsection, suite, isActive }) => {
     const [vrTourActive, setVrTourActive] = useState(false);
 
     const suiteIsFav = favouriteSuites.find(s => s.id === suite.id) ? true : false;
-
-    const VrTourPopup = ({ close }) => {
-        return (<div className="suites__popup" data-popup="vr">
-            <SuitesActionButton action="close" callback={() => close()} />
-            <iframe src={vrTour} frameBorder="0" title={title}></iframe>
-        </div>);
-    }
-
-    const renderVrTourButton = () => {
-        if (vrTour !== null && vrTour !== '') {
-            return <SuitesActionButton action="virtualtour" isActive={vrTourActive} callback={() => setVrTourActive(true)} />
-        }
-    }
     
     return (
         <div className={classes.join(' ')}>
@@ -44,7 +33,7 @@ const SuiteContainer = ({ setCurrentSubsection, suite, isActive }) => {
                 <SuitesActionButton isActive={suiteIsFav} action="favourite" callback={() => toggleFavourite(suite)} />
                 {pdf && <SuitesActionButton action="print" link={`https://finelineperspectives.dev/astoria/pdf/${pdf}`} />}
                 <SuitesActionButton action="compare" callback={() => setCurrentSubsection('favourites')} disable={favouriteSuites.length <= 1} />
-                {renderVrTourButton()}
+                <VrTourButton vrTour={vrTour} isActive={vrTourActive} callback={() => setVrTourActive(true)} />
             </div>
 
             <SuiteFloorplan floorplan={floorplan} title={title} section="suites" />
@@ -54,7 +43,7 @@ const SuiteContainer = ({ setCurrentSubsection, suite, isActive }) => {
             </Popup>
 
             <Popup open={vrTourActive} modal nested onClose={() => setVrTourActive(false)}>
-                {close => (<VrTourPopup close={close} />)}
+                {close => (<VrTourPopup title={title} vrTour={vrTour} close={close} />)}
             </Popup>
 
             <div className="suites__container--keyplans">

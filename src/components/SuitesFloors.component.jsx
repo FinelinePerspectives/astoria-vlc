@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 import { floors } from '../data/floors';
 import SuitesTypeFilter from '../components/SuitesTypeFilter.component';
@@ -6,9 +6,12 @@ import SuitesTypeFilter from '../components/SuitesTypeFilter.component';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import SuitesFloorplanPopup from './SuitesFloorplanPopup.component';
+import { Context } from '../context/context';
 
 
 const SuitesFloors = ({ currentSubsection, currentFloor }) => {
+    const { activeSuite } = useContext(Context);
+
     const classes = ['suites__content'];
     currentSubsection === 'floors' && classes.push('active');
 
@@ -19,6 +22,7 @@ const SuitesFloors = ({ currentSubsection, currentFloor }) => {
 
         const classes = ['suites__floor'];
         id === currentFloor && classes.push('active');
+
 
         return (
             <div className={classes.join(' ')} data-floor={id} key={id}>
@@ -39,7 +43,7 @@ const SuitesFloors = ({ currentSubsection, currentFloor }) => {
             {floors.map(floor => renderFloor(floor))}
 
             <Popup open={popupActive} modal nested onClose={() => setPopupActive(false)}>
-                {close => (<SuitesFloorplanPopup close={close} id="C1" />)}
+                {close => (<SuitesFloorplanPopup close={close} id={activeSuite} />)}
             </Popup>
         </div>
     )

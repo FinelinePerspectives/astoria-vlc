@@ -276,6 +276,38 @@
         justify-content: center;
         align-items: center;
 
+        &[data-section='floors'] {
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            row-gap: 50px;
+
+            .suiteInfo {
+                position: unset;
+                padding: 50px;
+            }
+
+            .suites__container--floorplan {
+                height: 1175px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 50px;
+            }
+
+            .suites__actions {
+                z-index: 2;
+                position: absolute;
+                top: 50px;
+                right: 50px;
+
+                .suites__actions--btn {
+                    position: unset;
+                }
+            }
+        }
+
         .suites__actions--btn {
             z-index: 2;
             position: absolute;
@@ -316,13 +348,13 @@
             justify-content: flex-end;
             align-items: flex-start;
             height: 1582px;
-            width: 2374px !important;
+            width: 100% !important;
     
             iframe {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 2374px !important;
+                width: 100% !important;
                 height: 100%;
                 z-index: 1;
             }
@@ -352,6 +384,11 @@
         flex-flow: row nowrap;
         justify-content: flex-end;
         align-items: center;
+
+        &[data-section='floors'] {
+            top: 50px;
+            right: 50px;
+        }
 
         &--btn {
             height: 105px;

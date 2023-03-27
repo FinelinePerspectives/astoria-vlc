@@ -15,7 +15,7 @@ const AppContext = ({ children }) => {
     const [userSettings, setUserSettings] = useState(initUserSettings);
 
     // Suites section
-    const [activeSuite, setActiveSuite] = useState("C1");
+    const [activeSuite, setActiveSuite] = useState("C3");
     const [activeSuiteTypeFilters, setActiveSuiteTypeFilters] = useState(initActiveSuiteTypeFilters)
     const [favouriteSuites, setFavouriteSuites] = useState([]);
     const [suites, setSuites] = useState(suitesData);
