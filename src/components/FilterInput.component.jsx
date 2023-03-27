@@ -8,7 +8,7 @@ const FilterInput = ({ input, setUserSettings }) => {
         }));
     }
 
-    return (<input type={id === 'email' ? 'email' : 'text'} name={id} onInput={(e) => onInputChange(e, id)} placeholder={label} defaultValue="" />)
+    return (<input type={id === 'email' ? 'email' : 'text'} name={id} onInput={(e) => onInputChange(e, id)} placeholder={label} />)
 }
 
 export default FilterInput;

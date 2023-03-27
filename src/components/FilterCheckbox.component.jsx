@@ -1,4 +1,4 @@
-const FilterCheckbox = ({ checkbox, userSettings, setUserSettings }) => {
+const FilterCheckbox = ({ checkbox, userSettings, setUserSettings, initChecked }) => {
     const { label, id } = checkbox;
 
     const isChecked = userSettings[id];
@@ -7,6 +7,7 @@ const FilterCheckbox = ({ checkbox, userSettings, setUserSettings }) => {
 
     const onInputCheck = (e, id) => {
         const isChecked = e.target.checked;
+
         setUserSettings((prevState) => ({
             ...prevState,
                 [id]: isChecked
@@ -16,7 +17,7 @@ const FilterCheckbox = ({ checkbox, userSettings, setUserSettings }) => {
     return (
         <div className={classes.join(' ')}>
             <p>{label}</p>
-            <input type="checkbox" onClick={(e) => onInputCheck(e, id)} name={id} />
+            <input type="checkbox" onClick={(e) => onInputCheck(e, id)} name={id} defaultChecked={initChecked} />
         </div>
     )
 }

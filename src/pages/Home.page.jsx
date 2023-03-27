@@ -74,7 +74,7 @@ const HomePage = ({ setCurrentSection }) => {
                         <div className="home__registration--header">
                             <p>Please fill out a few personal details</p>
                         </div>
-                        {filterInputs.map((input, i) => <div key={i} className="home__registration--input"><FilterInput input={input} userSettings={userSettings} setUserSettings={setUserSettings} /></div>)}
+                        {filterInputs.map((input, i) => <div key={i} className="home__registration--input"><FilterInput input={input} userSettings={userSettings} setUserSettings={setUserSettings} initValue={userSettings[input.id]} /></div>)}
                     </div>
 
                     <div className="home__registration--col" data-col="dropdowns">
