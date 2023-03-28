@@ -28,11 +28,13 @@ export const filterDropdowns = [
         placeholder: 'Square Foot Range',
         id: 'sqftRange',
         options: [
+            { label: '400 sqft - 499 sqft', value: '400-499' },
             { label: '500 sqft - 599 sqft', value: '500-599' },
             { label: '600 sqft - 699 sqft', value: '600-699' },
             { label: '700 sqft - 799 sqft', value: '700-799' },
             { label: '800 sqft - 899 sqft', value: '800-899' },
             { label: '900 sqft - 999 sqft', value: '900-999' },
+            { label: '1000+ sqft', value: '1000+' },
         ]
     },
     {
