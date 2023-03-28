@@ -1220,7 +1220,7 @@ export const suitesData = [
   },
   {
     "livingStyle": "luxuryapartments",
-    "id": "C20",
+    "id": "C20a",
     "title": "Freesia C20",
     "location": "2nd - 8th Floor",
     "type": "1 Bed + Den",
@@ -1243,7 +1243,7 @@ export const suitesData = [
   },
   {
     "livingStyle": "luxuryapartments",
-    "id": "C20",
+    "id": "C2",
     "title": "Stellar C2",
     "location": "2nd - 5th Floor",
     "type": "1 Bed + Den",
@@ -1910,7 +1910,7 @@ export const suitesData = [
   },
   {
     "livingStyle": "luxuryapartments",
-    "id": "LC20",
+    "id": "LC2",
     "title": "Trillium LC 2",
     "location": "Lower Level",
     "type": "1 Bed + Den",
