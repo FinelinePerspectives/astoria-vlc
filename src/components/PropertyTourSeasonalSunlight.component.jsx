@@ -17,9 +17,9 @@ const PropertyTourSeasonalSunlight = ({ isActive }) => {
         return s.substring(s.length-size);
     }
 
-    const handleRangeChange = (value) => {
-        const val = pad(value, 5);
-        setCurrentImage(val);
+    const handleRangeChange = (e) => {
+            const val = pad(e.target.value, 5);
+            setCurrentImage(val);
     }
 
     const resetIndex = () => setCurrentImage('00001');
@@ -73,7 +73,7 @@ const PropertyTourSeasonalSunlight = ({ isActive }) => {
             </div>
 
             <div className="propertyTour__seasonalSunlight--control">
-                <input type="range" min={1} max={100} onChange={(e) => handleRangeChange(e.target.value)} value={currentImage} />
+                <input step="2" type="range" min={1} max={100} onChange={(e) => handleRangeChange(e)} value={currentImage} />
             </div>
 
             <div className="propertyTour__seasonalSunlight--menu" data-menu="seasons">
