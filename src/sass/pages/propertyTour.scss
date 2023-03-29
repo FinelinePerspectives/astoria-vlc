@@ -56,7 +56,7 @@
           }
     }
 
-    &__seasonalSunlight {
+    &__seasonalSunlight {        
         &--menu {
             height: 90px;
             width: auto;
@@ -82,6 +82,8 @@
 
         &--image {
             &Wrapper {
+                background: #d9dada;
+
                 position: absolute;
                 top: 0;
                 left: 0;
