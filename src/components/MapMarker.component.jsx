@@ -9,7 +9,7 @@ const MapMarker = () => {
         setActiveMapItem
      } = useContext(Context);
 
-     const googleMapsBaseURL = 'https://maps.google.ca/';
+     const googleMapsBaseURL = 'https://google.ca/maps/search/';
      
      const { coords } = activeMapItem;
 
