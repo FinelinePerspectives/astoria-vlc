@@ -323,16 +323,15 @@
                 width: 100%;
                 height: 100%;
                 display: flex;
-                flex-flow: column nowrap;
+                flex-flow: row nowrap;
             }
 
             .suiteInfo {
-                position: unset;
                 padding: 50px;
             }
 
             .suites__container--floorplan {
-                height: 1175px;
+                height: 1581px;
                 width: 100%;
                 display: flex;
                 justify-content: center;
