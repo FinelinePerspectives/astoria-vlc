@@ -14,13 +14,13 @@ const NeighbourhoodTour = () => {
 
     return (
         <section className="neighbourhoodTour" data-category={currentNeighbourhoodTourCategory}>
-            <div className="neighbourhoodTour__sectionMenu--wrapper">
+            {/* <div className="neighbourhoodTour__sectionMenu--wrapper">
                 <SuitesActionButton action="map" callback={() => setCurrentSubsection('map')} isActive={currentSubsection === 'map'} />
                 <SuitesActionButton action="orbit" callback={() => setCurrentSubsection('googleorbit')} isActive={currentSubsection === 'googleorbit'} />
-            </div>
+            </div> */}
 
             <NeighbourhoodTourMapContainer isActive={currentSubsection === 'map'} />
-           <NeighbourhoodTourGoogleOrbit isActive={currentSubsection === 'googleorbit'} />
+           {/* <NeighbourhoodTourGoogleOrbit isActive={currentSubsection === 'googleorbit'} /> */}
         </section>
     )
 }
