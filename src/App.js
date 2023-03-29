@@ -20,6 +20,7 @@ function App() {
 
   useEffect(() => {
     console.log('App started');
+    window.addEventListener('DOMContentLoaded', () => console.log('yee'));
   }, []);
 
   return (
@@ -29,7 +30,7 @@ function App() {
             <div className="content">
               {currentSection === 'home' && <HomePage setCurrentSection={setCurrentSection} />}
               {currentSection === 'suites' && <SuitesPage />}
-              {currentSection === 'propertyTour' && <PropertyTourPage />}
+              {<PropertyTourPage isActive={currentSection === 'propertyTour'} />}
               {currentSection === 'neighbourhoodTour' && <NeighbourhoodTourPage />}
               {currentSection === 'gallery' && <GalleryPage />}
             </div>

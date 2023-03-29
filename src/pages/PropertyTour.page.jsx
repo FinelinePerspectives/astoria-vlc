@@ -4,11 +4,13 @@ import Button from '../components/Button.component';
 import PropertyTourOrbit from '../components/PropertyTourOrbit.component';
 import PropertyTourSeasonalSunlight from '../components/PropertyTourSeasonalSunlight.component';
 
-const PropertyTour = () => {
-    const [currentSubsection, setCurrentSubsection] = useState('seasonalsunlight');
+const PropertyTour = ({ isActive }) => {
+    const [currentSubsection, setCurrentSubsection] = useState('orbit');
+    const classes = ['propertyTour'];
+    isActive && classes.push('active');
 
     return (
-        <section className="propertyTour">
+        <section className={classes.join(' ')}>
             <div className="propertyTour__sectionMenu--wrapper">
                 <div className="propertyTour__sectionMenu">
                     <Button type="section" copy="Property Orbit" callback={() => setCurrentSubsection('orbit')} isActive={currentSubsection === 'orbit'} />
