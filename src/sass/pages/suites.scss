@@ -18,6 +18,15 @@
         }
     }
 
+    &__floorplate {
+        map {
+
+            area {
+                cursor: pointer;
+            }
+        }
+    }
+
     &__floor {
         display: none;
         opacity: 0;
